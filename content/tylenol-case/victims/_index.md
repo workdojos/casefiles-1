@@ -10,56 +10,56 @@ avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims-
 ---
 
 {{< typewriter >}}
-VICTIM FILES: 1-3 of 7
+VICTIM FILES: One through Three of Seven
 
-VICTIM #1: MARY KELLERMAN
-Age: 12 years old
-Date: September 29, 1982, 7:00 AM
-Location: 1425 Armstrong Lane
-         Elk Grove Village, IL
+VICTIM NUMBER ONE: MARY KELLERMAN
+Age: Twelve years old
+Date: September twenty-ninth, nineteen eighty-two, seven A.M.
+Location: One four two five Armstrong Lane
+          Elk Grove Village, Illinois
 
-Mary woke with cold symptoms.
-Her parents gave her Extra-Strength
-Tylenol. She collapsed minutes later.
-Pronounced dead at 9:30 AM.
+Mary woke with cold symptoms. 
+Her parents gave her Extra-Strength 
+Tylenol. She collapsed minutes later. 
+Pronounced dead at nine thirty A.M.
 
-First known victim.
-Death initially thought to be
-from stroke or heart condition.
-
----
-
-VICTIM #2: ADAM JANUS
-Age: 27 years old
-Date: September 29, 1982, 11:30 AM
-Location: 1540 Woodhaven Ct
-         Arlington Heights, IL
-
-Postal worker experiencing
-minor chest pain after work.
-Took Tylenol at home.
-Collapsed shortly after.
-Died at hospital.
-
-Family gathered at his home
-after his death.
+The first known victim. 
+Death initially thought to be 
+from a stroke or a heart condition.
 
 ---
 
-VICTIM #3: STANLEY JANUS
-Age: 25 years old  
-Date: September 29, 1982, 5:30 PM
-Location: Same as Adam (brother)
+VICTIM NUMBER TWO: ADAM JANUS
+Age: Twenty-seven years old
+Date: September twenty-ninth, nineteen eighty-two, eleven thirty A.M.
+Location: One five four zero Woodhaven Court
+          Arlington Heights, Illinois
 
-Stanley was Adam's younger brother.
-At family gathering following
-Adam's death, Stanley experienced
-headache from stress.
+A postal worker experiencing 
+minor chest pain after work. 
+He took Tylenol at home. 
+Collapsed shortly after. 
+Died at the hospital.
 
-Took Tylenol from Adam's bottle.
+Family gathered at his home 
+following his death.
+
+---
+
+VICTIM NUMBER THREE: STANLEY JANUS
+Age: Twenty-five years old  
+Date: September twenty-ninth, nineteen eighty-two, five thirty P.M.
+Location: Same as Adam.
+
+Stanley was Adam's younger brother. 
+At the family gathering following 
+Adam's death, Stanley experienced a 
+headache from the stress.
+
+He took Tylenol from Adam's bottle. 
 Collapsed within minutes.
 
-His wife Theresa also took pills
+His wife Theresa also took pills 
 from the same bottle.
 {{< /typewriter >}}
 

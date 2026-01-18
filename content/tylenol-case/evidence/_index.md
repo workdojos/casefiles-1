@@ -10,86 +10,87 @@ avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/evidence/evidenc
 ---
 
 {{< typewriter >}}
-EVIDENCE LOG: Items 1-3
+EVIDENCE LOG: ITEMS ONE THROUGH THREE
 
-EVIDENCE #1: CONTAMINATED BOTTLES
+EVIDENCE NUMBER ONE: CONTAMINATED BOTTLES
 Item: Extra-Strength Tylenol capsules
-Lot Number: MC2880
-Quantity: 5 bottles recovered
+Lot Number: M.C. two eight eight zero
+Quantity: Five bottles recovered
 
-All bottles contained cyanide-laced
+All bottles contained cyanide-laced 
 capsules mixed with normal capsules.
 
 Lab analysis showed:
-- Potassium cyanide in lethal doses
-- 65mg per capsule (lethal dose: 200mg)
-- Multiple capsules per bottle contaminated
-- Not all capsules in bottles poisoned
+- Potassium cyanide in lethal doses.
+- Sixty-five milligrams per capsule. 
+  Note: a lethal dose is two hundred milligrams.
+- Multiple capsules per bottle were contaminated.
+- Not all capsules in the bottles were poisoned.
 
-Contamination pattern suggests:
-Tamperer opened bottles, removed
-some capsules, replaced with poisoned
-capsules, resealed bottles.
+The contamination pattern suggests:
+The tamperer opened the bottles, removed 
+some capsules, replaced them with poisoned 
+capsules, and then resealed the bottles.
 
 CRITICAL FINDING:
-Bottles came from different production
+Bottles came from different production 
 runs and different manufacturing plants.
 
-Conclusion: Tampering occurred AFTER
-distribution to stores, not at factory.
+Conclusion: Tampering occurred AFTER 
+distribution to stores, not at the factory.
 
 [View Evidence Photo →](https://example.com/evidence/bottles)
 
 ---
 
-EVIDENCE #2: PACKAGING ANALYSIS
+EVIDENCE NUMBER TWO: PACKAGING ANALYSIS
 Item: Bottle seals and packaging
 Status: Tampered but subtle
 
-1982 packaging had minimal
+Nineteen eighty-two packaging had minimal 
 tamper-resistance:
-- Simple plastic cap
-- No safety seal under cap
-- No shrink wrap
-- Easy to open and reseal
+- A simple plastic cap.
+- No safety seal under the cap.
+- No shrink wrap.
+- Easy to open and reseal.
 
 Forensic examination showed:
-- Bottles appeared factory-sealed
-- Glue marks suggested resealing
-- No fingerprints recovered
-- No tool marks on packaging
+- Bottles appeared factory-sealed.
+- Glue marks suggested resealing.
+- No fingerprints were recovered.
+- No tool marks were found on the packaging.
 
-Tamperer was careful and skilled.
+The tamperer was careful and skilled.
 
-Post-case: This led to creation of
+Post-case: This led to the creation of 
 tamper-evident packaging nationwide.
 
 [View Packaging Analysis →](https://example.com/evidence/packaging)
 
 ---
 
-EVIDENCE #3: CYANIDE SOURCE
+EVIDENCE NUMBER THREE: CYANIDE SOURCE
 Item: Potassium cyanide traces
 Origin: Never determined
 
-Cyanide used was potassium cyanide.
-Available from multiple sources:
-- Photography supplies
-- Jewelry making
-- Industrial cleaning  
-- Pest control
-- Chemistry labs
+The cyanide used was potassium cyanide. 
+It is available from multiple sources:
+- Photography supplies.
+- Jewelry making.
+- Industrial cleaning.  
+- Pest control.
+- Chemistry labs.
 
-FBI tracked sales records.
-No definitive source identified.
+The Federal Bureau of Investigation tracked sales records. 
+No definitive source was identified.
 
 The tamperer likely had:
-- Access to cyanide (commercial or theft)
-- Knowledge of lethal dosing
-- Ability to handle safely
+- Access to cyanide through commercial channels or theft.
+- Knowledge of lethal dosing.
+- The ability to handle the substance safely.
 
-No records of suspicious purchases
-in Chicago area before deaths.
+No records of suspicious purchases 
+in the Chicago area were found before the deaths.
 
 [View Toxicology Report →](https://example.com/evidence/toxicology)
 {{< /typewriter >}}

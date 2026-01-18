@@ -46,5 +46,4 @@ files = [
   ["Case Support", "/tylenol-case/support/"],
   ["Media Logs", "/tylenol-case/media/"],
   ["Timeline", "/tylenol-case/timeline/"],
-  ["Documents", "/tylenol-case/documents/"]
 ]

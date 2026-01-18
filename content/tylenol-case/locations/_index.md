@@ -10,90 +10,94 @@ avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/locations/locati
 ---
 
 {{< typewriter >}}
-CRIME SCENE LOCATIONS: 1-3 of 7
+CRIME SCENE LOCATIONS: ONE THROUGH THREE OF SEVEN
 
-LOCATION #1: KELLERMAN RESIDENCE
-Address: 1425 Armstrong Lane
-         Elk Grove Village, IL
-GPS: 42.0084, -87.9870
-Date: September 29, 1982, 7:00 AM
+LOCATION NUMBER ONE: KELLERMAN RESIDENCE
+Address: One four two five Armstrong Lane
+          Elk Grove Village, Illinois
+G.P.S. Coordinates: Four two point zero zero eight four, 
+                    negative eight seven point nine eight seven zero
+Date: September twenty-ninth, nineteen eighty-two, seven A.M.
 
-Single-family home.
-Victim: Mary Kellerman (age 12)
+A single-family home.
+Victim: Mary Kellerman, age twelve.
 
 Evidence recovered:
-- Tylenol bottle (Lot MC2880)
-- 3 remaining capsules tested positive
-  for potassium cyanide
-- Packaging appeared intact
+- One Tylenol bottle, Lot number M.C. two eight eight zero.
+- Three remaining capsules tested positive 
+  for potassium cyanide.
+- Packaging appeared intact.
 
-Parents purchased bottle days earlier
-at local pharmacy.
+Parents purchased the bottle several days earlier 
+at a local pharmacy.
 
-No signs of forced entry.
-Tampering occurred before purchase.
+No signs of forced entry. 
+The tampering occurred before the purchase.
 
 ---
 
-LOCATION #2: ADAM JANUS RESIDENCE  
-Address: 1540 Woodhaven Ct
-         Arlington Heights, IL
-GPS: 42.0881, -87.9806
-Date: September 29, 1982, 11:30 AM
-      and 5:30 PM
+LOCATION NUMBER TWO: ADAM JANUS RESIDENCE  
+Address: One five four zero Woodhaven Court
+          Arlington Heights, Illinois
+G.P.S. Coordinates: Four two point zero eight eight one, 
+                    negative eight seven point nine eight zero six
+Date: September twenty-ninth, nineteen eighty-two, eleven thirty A.M. 
+      and five thirty P.M.
 
-Single-family home.
-Victims: Adam Janus (age 27)
-         Stanley Janus (age 25)
-         Theresa Janus (age 19)
+A single-family home.
+Victims: Adam Janus, age twenty-seven.
+         Stanley Janus, age twenty-five.
+         Theresa Janus, age nineteen.
 
 CRITICAL SCENE:
 Three deaths from ONE bottle.
 
 Evidence recovered:
-- Tylenol bottle (Lot MC2880)
-- Multiple capsules tested positive
-- Bottle purchased at Jewel-Osco
-  at 1601 W Golf Rd
+- One Tylenol bottle, Lot number M.C. two eight eight zero.
+- Multiple capsules tested positive.
+- Bottle purchased at Jewel-Osco 
+  at one six zero one West Golf Road.
 
-Adam died first.
-Hours later, at family gathering,
-Stanley and Theresa took pills
-from same bottle.
+Adam died first. 
+Hours later, at a family gathering, 
+Stanley and Theresa took pills 
+from the same bottle.
 
-Both collapsed simultaneously
+Both collapsed simultaneously 
 in front of family members.
 
-This was the breakthrough moment:
-Multiple deaths, same location,
-same bottle = product tampering.
+This was the breakthrough moment: 
+Multiple deaths, at the same location, 
+from the same bottle, equals product tampering.
 
 ---
 
-LOCATION #3: JEWEL-OSCO STORE
-Address: 1601 W Golf Rd
-         Arlington Heights, IL
-GPS: 42.0598, -87.9884
-Date: Purchases made Sept 1982
+LOCATION NUMBER THREE: JEWEL-OSCO STORE
+Address: One six zero one West Golf Road
+          Arlington Heights, Illinois
+G.P.S. Coordinates: Four two point zero five nine eight, 
+                    negative eight seven point nine eight eight four
+Date: Purchases made September, nineteen eighty-two.
 
-Major grocery chain.
-Multiple contaminated bottles
-purchased here.
+A major grocery chain. 
+Multiple contaminated bottles 
+were purchased here.
 
-Adam Janus purchased his bottle here.
+Adam Janus purchased his bottle here. 
 Possibly others as well.
 
-Store recalled all Tylenol products.
-Entire lot MC2880 removed from shelves.
+The store recalled all Tylenol products. 
+The entire Lot M.C. two eight eight zero was 
+removed from the shelves.
 
 Investigation findings:
-- Bottles were on shelf for weeks
-- Store had normal security
-- No surveillance of tampering
-- Access was public during store hours
+- Bottles were on the shelf for weeks.
+- The store had normal security.
+- No surveillance of the tampering.
+- Access was public during store hours.
 
-Anyone could have tampered with
-products on the shelf.
+Anyone could have tampered with 
+the products on the shelf.
 {{< /typewriter >}}
 
 ---

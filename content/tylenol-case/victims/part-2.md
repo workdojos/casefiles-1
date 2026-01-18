@@ -10,77 +10,77 @@ avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims-
 ---
 
 {{< typewriter >}}
-VICTIM FILES: 4-7 of 7
+VICTIM FILES: Four through Seven of Seven
 
-VICTIM #4: THERESA JANUS
-Age: 19 years old
-Date: September 29, 1982, 5:30 PM
-Location: 1540 Woodhaven Ct
-         Arlington Heights, IL
+VICTIM NUMBER FOUR: THERESA JANUS
+Age: Nineteen years old
+Date: September twenty-ninth, nineteen eighty-two, five thirty P.M.
+Location: One five four zero Woodhaven Court
+          Arlington Heights, Illinois
 
-Stanley's wife.
-Recently married.
-Took Tylenol from same bottle
-as her husband during the
+Theresa was Stanley's wife. 
+They were recently married. 
+She took Tylenol from the same bottle
+as her husband during the 
 family gathering.
 
-Both Stanley and Theresa
+Both Stanley and Theresa 
 collapsed simultaneously.
 
-Three members of one family
-dead from single bottle.
+Three members of one family 
+died from a single bottle.
 
 ---
 
-VICTIM #5: MARY REINER
-Age: 27 years old
-Date: September 29, 1982, evening
-Location: 1015 Granville Ave
-         Winfield, IL
+VICTIM NUMBER FIVE: MARY REINER
+Age: Twenty-seven years old
+Date: September twenty-ninth, nineteen eighty-two, evening
+Location: One zero one five Granville Avenue
+          Winfield, Illinois
 
-Young mother who had recently
-given birth to her fourth child.
-Took Tylenol for post-birth pain.
+A young mother who had recently 
+given birth to her fourth child. 
+She took Tylenol for post-birth pain.
 
-She collapsed at home.
+She collapsed at home. 
 Died shortly after.
 
-Left behind four young children
-including newborn.
+Left behind four young children 
+including a newborn.
 
 ---
 
-VICTIM #6: MARY McFARLAND
-Age: 31 years old
-Date: September 30, 1982, morning
-Location: 1251 Eastwood Dr
-         Lombard, IL
+VICTIM NUMBER SIX: MARY MCFARLAND
+Age: Thirty-one years old
+Date: September thirtieth, nineteen eighty-two, morning
+Location: One two five one Eastwood Drive
+          Lombard, Illinois
 
-Took Tylenol at work for headache.
-Worked at Illinois Bell.
+She took Tylenol at work for a headache. 
+She worked at Illinois Bell. 
 Collapsed at her workplace.
 
-Coworkers called paramedics.
-Died at hospital.
+Coworkers called paramedics. 
+Died at the hospital.
 
 ---
 
-VICTIM #7: PAULA PRINCE
-Age: 35 years old
-Date: October 1, 1982
-Location: 1540 N LaSalle St
-         Chicago, IL
+VICTIM NUMBER SEVEN: PAULA PRINCE
+Age: Thirty-five years old
+Date: October first, nineteen eighty-two
+Location: One five four zero North LaSalle Street
+          Chicago, Illinois
 
-Flight attendant for United Airlines.
-Last known victim.
-Purchased Tylenol at Walgreens
+A flight attendant for United Airlines. 
+The last known victim. 
+Purchased Tylenol at Walgreens 
 on her way home from work.
 
-Found dead in her apartment
-two days later by coworkers
+Found dead in her apartment 
+two days later by coworkers 
 when she missed her flight.
 
-Bottle found at scene with
+A bottle was found at the scene with 
 cyanide-laced capsules.
 {{< /typewriter >}}
 

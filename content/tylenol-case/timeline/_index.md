@@ -10,77 +10,77 @@ avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/sequenc
 ---
 
 {{< typewriter >}}
-sequence: SEPTEMBER 29 - OCTOBER 1, 1982
+SEQUENCE: SEPTEMBER TWENTY-NINTH THROUGH OCTOBER FIRST, NINETEEN EIGHTY-TWO
 
-DAY 1: WEDNESDAY, SEPT 29, 1982
+DAY ONE: WEDNESDAY, SEPTEMBER TWENTY-NINTH, NINETEEN EIGHTY-TWO
 
-7:00 AM - Elk Grove Village
-Mary Kellerman (12) takes Tylenol.
-Collapses minutes later.
-Dies at 9:30 AM.
-Initial thought: stroke or sudden illness.
+SEVEN A.M. — ELK GROVE VILLAGE
+Twelve year old Mary Kellerman takes Tylenol.
+She collapses minutes later.
+Dies at nine thirty A.M.
+Initial thought: a stroke or sudden illness.
 
-11:30 AM - Arlington Heights  
-Adam Janus (27) takes Tylenol.
+ELEVEN THIRTY A.M. — ARLINGTON HEIGHTS  
+Twenty-seven year old Adam Janus takes Tylenol.
 Collapses at home.
-Dies at hospital.
+Dies at the hospital.
 
-5:30 PM - Same location
+FIVE THIRTY P.M. — SAME LOCATION
 Family gathering after Adam's death.
-Stanley Janus (25) has headache.
-His wife Theresa (19) joins him.
+Twenty-five year old Stanley Janus has a headache.
+His wife, nineteen year old Theresa, joins him.
 Both take Tylenol from Adam's bottle.
 Both collapse simultaneously.
 
-EVENING - Winfield
-Mary Reiner (27) takes Tylenol.
-New mother, four children.
-Dies at home.
+EVENING — WINFIELD
+Twenty-seven year old Mary Reiner takes Tylenol.
+A new mother of four children.
+She dies at home.
 
 LATE EVENING
-Medical examiner recognizes pattern.
-Three deaths, same family, same bottle.
-Suspects product tampering.
+The medical examiner recognizes a pattern.
+Three deaths, in the same family, from the same bottle.
+Authorities suspect product tampering.
 
 ---
 
-DAY 2: THURSDAY, SEPT 30, 1982
+DAY TWO: THURSDAY, SEPTEMBER THIRTIETH, NINETEEN EIGHTY-TWO
 
-MORNING - Lombard  
-Mary McFarland (31) takes Tylenol at work.
-Illinois Bell employee.
-Collapses at workplace.
-Dies at hospital.
+MORNING — LOMBARD  
+Thirty-one year old Mary McFarland takes Tylenol at work.
+An Illinois Bell employee.
+Collapses at her workplace.
+Dies at the hospital.
 
 AFTERNOON
-Pattern confirmed: cyanide poisoning.
-All victims took Tylenol.
-Chicago area goes on high alert.
+The pattern is confirmed as cyanide poisoning.
+All victims had taken Tylenol.
+The Chicago area goes on high alert.
 
 EVENING
-Johnson & Johnson issues recall.
-31 million bottles nationwide.
-Chicago police warn public via media.
+Johnson and Johnson issues a recall.
+Thirty-one million bottles are recalled nationwide.
+Chicago police warn the public via the media.
 
 ---
 
-DAY 3: FRIDAY, OCTOBER 1, 1982
+DAY THREE: FRIDAY, OCTOBER FIRST, NINETEEN EIGHTY-TWO
 
 EVENING
-Paula Prince (35) purchases Tylenol
-at Walgreens on way home from work.
-Flight attendant.
-Takes pills at home.
+Thirty-five year old Paula Prince purchases Tylenol
+at Walgreens on her way home from work.
+A flight attendant.
+She takes the pills at home.
 
-SATURDAY, OCTOBER 2
-Paula found dead in apartment
-by coworkers when she misses flight.
+SATURDAY, OCTOBER SECOND
+Paula is found dead in her apartment
+by coworkers when she misses her flight.
 
-Bottle with cyanide capsules
-found at scene.
+A bottle with cyanide capsules is
+found at the scene.
 
-Seven confirmed dead.
-Case becomes national crisis.
+Seven people are confirmed dead.
+The case becomes a national crisis.
 {{< /typewriter >}}
 
 ---
