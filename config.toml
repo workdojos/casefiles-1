@@ -36,10 +36,15 @@ use = true
 folderName = "files"
 files = [ 
   ["Start Here: Case Briefing", "/tylenol-case/"],
-  ["Victims (7 total)", "/tylenol-case/victims/"],
-  ["Suspects", "/tylenol-case/suspects/"],
-  ["Locations", "/tylenol-case/locations/"],
-  ["Timeline", "/tylenol-case/timeline/"],
+  ["Victim Board", "/tylenol-case/board/"],
+  ["Crime Scene Briefing", "/tylenol-case/briefing/"],
+  ["Community & Locations", "/tylenol-case/community/"],
+  ["Physical Toolkit", "/tylenol-case/toolkit/"],
   ["Evidence", "/tylenol-case/evidence/"],
-  ["Documents", "/tylenol-case/documents/"],
+  ["Suspect Intake", "/tylenol-case/intake/"],
+  ["Case Tasks", "/tylenol-case/tasks/"],
+  ["Case Support", "/tylenol-case/support/"],
+  ["Media Logs", "/tylenol-case/media/"],
+  ["Timeline", "/tylenol-case/timeline/"],
+  ["Documents", "/tylenol-case/documents/"]
 ]
