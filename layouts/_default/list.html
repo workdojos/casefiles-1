@@ -212,7 +212,7 @@
     
     {{ if .Params.avatar_video }}
     <div class="avatar-overlay">
-        <video autoplay loop muted playsinline webkit-playsinline>
+        <video autoplay loop unmuted playsinline webkit-playsinline>
             <source src="{{ .Params.avatar_video }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>

@@ -6,7 +6,7 @@ featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/locations/loca
 video_url: ""
 iframe_url: "https://tylenol-murders.netlify.app"
 audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/tcgty.wav"
-avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/suspects/locations-avatar.mp4"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/locations/locations-avatar.mp4"
 ---
 
 {{< typewriter >}}

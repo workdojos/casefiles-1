@@ -3,10 +3,10 @@ title: "Tylenol Murders - Case Briefing"
 date: 1982-09-29
 draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/case-briefing/case-briefing.png"
-video_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/case-briefing/case-briefing.mp4"
+video_url: ""
 iframe_url: "https://tylenol-murders.netlify.app"
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/case-briefing/case-briefing.mp3"
-avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/suspects/briefing-avatar.mp4"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/tcgty.wav"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/briefing/briefing-avatar.mp4"
 ---
 
 {{< typewriter >}}
