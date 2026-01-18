@@ -1,6 +1,6 @@
 baseURL = "https://your-site.netlify.app/"
 title = "Tylenol Murders Case Files"
-theme = "shell"
+theme = "github.com/Yukuro/hugo-theme-shell"
 languageCode = "en-us"
 
 [Params]
