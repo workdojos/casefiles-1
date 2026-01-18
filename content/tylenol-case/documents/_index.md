@@ -3,9 +3,9 @@ title: "Tylenol Murders - Case Documents"
 date: 1982-10-01
 draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/documents/documents.png"
-video_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/documents/documents.mp4"
+video_url: ""
 iframe_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/documents/documents.mp3"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/tcgty.wav"
 avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/suspects/documents-avatar.mp4"
 ---
 

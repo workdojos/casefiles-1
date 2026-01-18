@@ -3,9 +3,9 @@ title: "Tylenol Murders - Victims - Part 1"
 date: 1982-09-29
 draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims.png"
-video_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims.mp4"
+video_url: ""
 iframe_url: "https://tylenol-murders.netlify.app"
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims.mp3"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/tcgty.wav"
 avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/suspects/victims-avatar.mp4"
 ---
 
