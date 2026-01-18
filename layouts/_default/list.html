@@ -14,20 +14,18 @@
             margin: 0;
         }
         
-        /* Mobile styles (default) */
         article {
             max-width: 100%;
             margin: 0 auto;
             font-size: 1.1em;
         }
         
-        /* Desktop styles */
         @media (min-width: 768px) {
             body {
                 padding: 40px;
             }
             article {
-                max-width: 1400px;
+                max-width: 2400px;
                 font-size: 1.15em;
             }
         }
@@ -40,6 +38,7 @@
             padding: 15px; 
             border-radius: 5px; 
             overflow-x: auto;
+            white-space: pre-wrap;
         }
         code { color: #e6db74; }
         hr { border: 1px solid #49483e; margin: 30px 0; }
@@ -49,34 +48,63 @@
         
         /* Featured image */
         .featured-image {
+            max-width: 400px;
             width: 100%;
             height: auto;
             margin-bottom: 30px;
             border-radius: 11px;
             box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
+            display: block;
         }
         
         /* Video container */
         .video-container {
+            max-width: 600px;
             margin-bottom: 30px;
             border-radius: 11px;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
         }
         
-        .video-container video,
-        .video-container iframe {
+        .video-container video {
             width: 100%;
             height: auto;
-            min-height: 400px;
             display: block;
         }
         
-        /* Iframe container - 16:9 aspect ratio */
-        .iframe-container {
-            position: relative;
+        .video-container iframe {
             width: 100%;
-            padding: 20px 0;
+            height: 350px;
+            display: block;
+            border: none;
+        }
+        
+        /* Two column layout - desktop only */
+        .content-wrapper {
+            display: block;
+        }
+        
+        @media (min-width: 768px) {
+            .content-wrapper {
+                display: flex;
+                gap: 40px;
+                align-items: flex-start;
+            }
+            
+            .main-content {
+                flex: 1 1 60%;
+            }
+            
+            .sidebar-content {
+                flex: 0 0 35%;
+                position: sticky;
+                top: 20px;
+            }
+        }
+        
+        /* Iframe container */
+        .iframe-container {
+            width: 100%;
             margin-bottom: 30px;
         }
         
@@ -111,6 +139,37 @@
         .audio-container audio {
             width: 100%;
         }
+        
+        /* Avatar overlay */
+        .avatar-overlay {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(102, 217, 239, 0.5);
+            z-index: 9999;
+            border: 3px solid #66d9ef;
+            background: #272822;
+        }
+        
+        .avatar-overlay video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        @media (max-width: 767px) {
+            .avatar-overlay {
+                width: 120px;
+                height: 120px;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -131,43 +190,47 @@
                 {{ else }}
                     {{ $videoID = replaceRE ".*[?&]v=([^&]+).*" "$1" .Params.video_url }}
                 {{ end }}
-                <iframe width="100%" height="500" src="https://www.youtube.com/embed/{{ $videoID }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/{{ $videoID }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             {{ else }}
                 <video controls>
                     <source src="{{ .Params.video_url }}" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
             {{ end }}
         </div>
         {{ end }}
         
-        {{ if .Params.iframe_url }}
-        <div class="iframe-container">
-            <div class="iframe-wrapper">
-                <iframe src="{{ .Params.iframe_url }}" allowfullscreen></iframe>
+        <div class="content-wrapper">
+            <div class="main-content">
+                {{ if .Params.audio_url }}
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="{{ .Params.audio_url }}" type="audio/mpeg">
+                    </audio>
+                </div>
+                {{ end }}
+                
+                {{ .Content }}
+                
+                {{ if .Pages }}
+                <h2>Pages in this section:</h2>
+                <ul class="page-list">
+                {{ range .Pages }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+                </ul>
+                {{ end }}
             </div>
+            
+            {{ if .Params.iframe_url }}
+            <div class="sidebar-content">
+                <div class="iframe-container">
+                    <div class="iframe-wrapper">
+                        <iframe src="{{ .Params.iframe_url }}" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
         </div>
-        {{ end }}
-        
-        {{ if .Params.audio_url }}
-        <div class="audio-container">
-            <audio controls>
-                <source src="{{ .Params.audio_url }}" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        {{ end }}
-        
-        {{ .Content }}
-        
-        {{ if .Pages }}
-        <h2>Pages in this section:</h2>
-        <ul class="page-list">
-        {{ range .Pages }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
-        </ul>
-        {{ end }}
     </article>
     
     {{ if .Params.avatar_video }}
@@ -176,36 +239,6 @@
             <source src="{{ .Params.avatar_video }}" type="video/mp4">
         </video>
     </div>
-    
-    <style>
-        .avatar-overlay {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 0 30px rgba(102, 217, 239, 0.5);
-            z-index: 9999;
-            border: 3px solid #66d9ef;
-        }
-        
-        .avatar-overlay video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        @media (max-width: 767px) {
-            .avatar-overlay {
-                width: 120px;
-                height: 120px;
-                bottom: 10px;
-                right: 10px;
-            }
-        }
-    </style>
     {{ end }}
 </body>
 </html>
