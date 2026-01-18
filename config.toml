@@ -3,67 +3,40 @@ title = "Tylenol Murders Case Files"
 theme = "hugo-theme-shell"
 languageCode = "en-us"
 
-DefaultContentLanguage = "en"
-SectionPagesMenu = "main"
-enableRobotsTXT = true
-
-[pagination]
-  pagerSize = 10
-
-[languages]
-  [languages.en]
-    title = "Tylenol Case Files"
-    weight = 1
-    contentDir = "content"
-
-[sitemap]
-  changefreq = "monthly"
-  priority = 0.5
-  filename = "sitemap.xml"
-
 [Params]
-  text_color = ""
-  author = "Chicago Police Department"
-  favicon = ""
-  site_logo = ""
-  description = "Chicago Tylenol Murders Investigation Files - 1982"
-  background_color_class = "bg-black"
-  recent_posts_number = 3
-  
-  [Params.Terminal]
-  scheme = "Molokai"
-  userName = "detective"
-  pcName = "cpd-terminal"
-  workDir = "case-files"
-  profile = "briefing.txt"
-  
-  ps1Delay = 0
-  stdoutDelay = 0
-  commandDelay = 50
-  titleDelay = 0
-  contentDelay = 0
-  
-  description = """
-  CHICAGO POLICE DEPARTMENT
-  CASE FILE SYSTEM v2.1
-  
-  Welcome, Detective.
-  
-  Tylenol Murders - 1982
-  7 victims. Unsolved.
-  
-  Navigate case files below.
-  """
-  
-  [Params.Tree]
-  use = true
-  folderName = "case_files"
-  files = [ 
-    ["START: Case Briefing", "/tylenol-case/"],
-    ["Victims (7 total)", "/tylenol-case/victims/"],
-    ["Suspects", "/tylenol-case/suspects/"],
-    ["Locations", "/tylenol-case/locations/"],
-    ["Timeline", "/tylenol-case/timeline/"],
-    ["Evidence", "/tylenol-case/evidence/"],
-    ["Documents", "/tylenol-case/documents/"],
-  ]
+
+[Params.Terminal]
+scheme = "Molokai"
+userName = "detective"
+pcName = "cpd-terminal"
+workDir = "case-files"
+profile = "briefing.txt"
+ps1Delay = 0
+stdoutDelay = 0
+commandDelay = 50
+titleDelay = 0
+contentDelay = 0
+description = """
+CHICAGO POLICE DEPARTMENT
+CASE FILE SYSTEM v2.1
+
+Welcome, Detective.
+
+Tylenol Murders - 1982
+7 victims. Unsolved.
+
+Navigate case files below.
+"""
+
+[Params.Tree]
+use = true
+folderName = "case_files"
+files = [ 
+  ["START: Case Briefing", "/tylenol-case/"],
+  ["Victims (7 total)", "/tylenol-case/victims/"],
+  ["Suspects", "/tylenol-case/suspects/"],
+  ["Locations", "/tylenol-case/locations/"],
+  ["Timeline", "/tylenol-case/timeline/"],
+  ["Evidence", "/tylenol-case/evidence/"],
+  ["Documents", "/tylenol-case/documents/"],
+]
