@@ -221,73 +221,96 @@
     </div>
     {{ end }}
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            // --- VARIABLES ---
-            const startScreen = document.getElementById('start-screen');
-            const textToType = "{{ .Title }}";
-            const typeContainer = document.getElementById('typewriter-text');
-            const typeSound = document.getElementById('typeSound');
-            const avatarContainer = document.getElementById('avatarOverlay');
-            
-            let typeIndex = 0;
-            const typeSpeed = 100;
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // --- VARIABLES ---
+        const startScreen = document.getElementById('start-screen');
+        const textToType = "{{ .Title }}";
+        const typeContainer = document.getElementById('typewriter-text');
+        const typeSound = document.getElementById('typeSound');
+        
+        // Target the Avatar Video
+        const avatarContainer = document.getElementById('avatarOverlay');
+        
+        // Target the Main Audio Player (if it exists on the page)
+        const mainAudio = document.querySelector('.audio-container audio');
+        
+        let typeIndex = 0;
+        const typeSpeed = 100;
 
-            // --- TYPEWRITER FUNCTION ---
-            function typeWriter() {
-                if (typeIndex < textToType.length) {
-                    typeContainer.textContent += textToType.charAt(typeIndex);
-                    typeIndex++;
-                    setTimeout(typeWriter, typeSpeed);
-                } else {
-                    // STOP SOUND when finished
-                    if(typeSound) {
-                        typeSound.pause();
-                        typeSound.currentTime = 0;
-                    }
+        // --- TYPEWRITER FUNCTION ---
+        function typeWriter() {
+            if (typeIndex < textToType.length) {
+                typeContainer.textContent += textToType.charAt(typeIndex);
+                typeIndex++;
+                setTimeout(typeWriter, typeSpeed);
+            } else {
+                // STOP TYPEWRITER SOUND when finished
+                if(typeSound) {
+                    typeSound.pause();
+                    typeSound.currentTime = 0;
                 }
             }
+        }
 
-            // --- START SEQUENCE ---
-            startScreen.addEventListener('click', function() {
-                // 1. Fade out start screen
-                startScreen.style.opacity = '0';
-                setTimeout(() => {
-                    startScreen.style.display = 'none';
-                    // Re-enable scrolling
-                    document.body.style.overflow = 'auto'; 
-                }, 500);
+        // --- START SEQUENCE (Where the magic happens) ---
+        startScreen.addEventListener('click', function() {
+            // 1. Fade out start screen
+            startScreen.style.opacity = '0';
+            setTimeout(() => {
+                startScreen.style.display = 'none';
+                document.body.style.overflow = 'auto'; 
+            }, 500);
 
-                // 2. Reveal Content
-                document.body.classList.add('active');
+            // 2. Reveal Content
+            document.body.classList.add('active');
 
-                // 3. Play Sound & Start Typing
-                if (typeContainer) {
-                    if (typeSound) {
-                        typeSound.volume = 0.5;
-                        // This play() is guaranteed to work because it's inside a click event
-                        typeSound.play().catch(e => console.error(e));
-                    }
-                    typeWriter();
+            // 3. Play Typewriter Sound & Start Typing
+            if (typeContainer) {
+                if (typeSound) {
+                    typeSound.volume = 0.5;
+                    typeSound.play().catch(e => console.error("Type sound error:", e));
                 }
-            });
+                typeWriter();
+            }
 
-            // --- AVATAR VIDEO LOGIC (Separate from start screen) ---
+            // 4. AUTOPLAY AVATAR (Unmuted)
+            // Since we are inside a click event, we can play video with sound instantly.
             if (avatarContainer) {
-                const video = avatarContainer.querySelector('video');
-                if (video) {
-                    avatarContainer.addEventListener('click', function() {
-                        if (video.paused) {
-                            video.play().then(() => avatarContainer.classList.add('playing')).catch(e => console.error(e));
-                        } else {
-                            video.pause();
-                            avatarContainer.classList.remove('playing');
-                        }
-                    });
+                const avVideo = avatarContainer.querySelector('video');
+                if (avVideo) {
+                    avVideo.muted = false; // Ensure sound is on
+                    avVideo.play()
+                        .then(() => avatarContainer.classList.add('playing')) // Hides the play button overlay
+                        .catch(e => console.error("Avatar autoplay error:", e));
                 }
             }
+
+            // 5. AUTOPLAY MAIN AUDIO FILE (Optional)
+            // To use this INSTEAD of or WITH the avatar, uncomment the lines below:
+            /*
+            if (mainAudio) {
+                mainAudio.play().catch(e => console.error("Main audio error:", e));
+            }
+            */
         });
-    </script>
+
+        // --- AVATAR CLICK TOGGLE (If user wants to pause/play later) ---
+        if (avatarContainer) {
+            const video = avatarContainer.querySelector('video');
+            if (video) {
+                avatarContainer.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play().then(() => avatarContainer.classList.add('playing'));
+                    } else {
+                        video.pause();
+                        avatarContainer.classList.remove('playing');
+                    }
+                });
+            }
+        }
+    });
+</script>
 </body>
 </html>
