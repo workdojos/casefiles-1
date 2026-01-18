@@ -12,8 +12,53 @@
             padding: 20px;
             line-height: 1.6;
             margin: 0;
+            /* Prevent scrolling while start screen is active */
+            overflow: hidden; 
+        }
+
+        /* --- Start Screen Overlay --- */
+        #start-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 999999; /* Highest priority */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: opacity 0.5s ease;
+        }
+
+        #start-screen p {
+            font-size: 1.5em;
+            color: #66d9ef;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        /* Hide content initially to prevent flash */
+        article, .avatar-overlay, .back-link {
+            opacity: 0; 
+            transition: opacity 1s ease;
+        }
+
+        /* Class to reveal content */
+        body.active article, 
+        body.active .avatar-overlay,
+        body.active .back-link {
+            opacity: 1;
         }
         
+        /* Rest of your existing CSS */
         article {
             max-width: 100%;
             margin: 0 auto;
@@ -21,197 +66,106 @@
         }
         
         @media (min-width: 768px) {
-            body {
-                padding: 40px;
-            }
-            article {
-                font-size: 1.15em;
-            }
+            body { padding: 40px; }
+            article { font-size: 1.15em; }
         }
         
-        h1, h2, h3 { 
-            color: #66d9ef;
-            text-align: center;
+        h1, h2, h3 { color: #66d9ef; text-align: center; }
+        
+        /* Typewriter Cursor */
+        .typewriter-cursor {
+            display: inline-block;
+            width: 10px;
+            background-color: #66d9ef;
+            animation: blink 1s step-end infinite;
+            vertical-align: text-bottom;
         }
+        
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
         a { color: #a6e22e; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        pre { 
-            background: #1e1e1e; 
-            padding: 15px; 
-            border-radius: 5px; 
-            overflow-x: auto;
-        }
+        pre { background: #1e1e1e; padding: 15px; border-radius: 5px; overflow-x: auto; }
         code { color: #e6db74; }
         hr { border: 1px solid #49483e; margin: 30px 0; }
-        .back-link { 
-            margin-bottom: 30px; 
-            display: inline-block;
-        }
+        .back-link { margin-bottom: 30px; display: inline-block; }
         .page-list { list-style: none; padding: 0; }
         .page-list li { margin: 15px 0; }
         
-        /* Featured image - centered, smaller */
         .featured-image {
-            max-width: 200px;
-            width: 100%;
-            height: auto;
-            margin: 0 auto 30px auto;
-            border-radius: 11px;
-            box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
-            display: block;
+            max-width: 200px; width: 100%; height: auto; margin: 0 auto 30px auto;
+            border-radius: 11px; box-shadow: 0 0 20px rgba(102, 217, 239, 0.3); display: block;
         }
         
-        /* Video container - centered, smaller */
         .video-container {
-            max-width: 300px;
-            margin: 0 auto 30px auto;
-            border-radius: 11px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
+            max-width: 300px; margin: 0 auto 30px auto; border-radius: 11px;
+            overflow: hidden; box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
         }
+        .video-container video { width: 100%; height: auto; display: block; }
+        .video-container iframe { width: 100%; height: 200px; display: block; border: none; }
         
-        .video-container video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .video-container iframe {
-            width: 100%;
-            height: 200px;
-            display: block;
-            border: none;
-        }
-        
-        /* Audio player - just below video */
         .audio-container {
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-            padding: 20px;
-            background: #1e1e1e;
-            border-radius: 11px;
-            box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
+            max-width: 800px; margin: 0 auto 30px auto; padding: 20px;
+            background: #1e1e1e; border-radius: 11px; box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
         }
+        .audio-container audio { width: 100%; }
         
-        .audio-container audio {
-            width: 100%;
-        }
-        
-        /* Iframe container - 90% width with padding */
-        .iframe-container {
-            width: 90%;
-            margin: 0 auto 30px auto;
-        }
-        
+        .iframe-container { width: 90%; margin: 0 auto 30px auto; }
         .iframe-wrapper {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            border-radius: 11px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
-            background: #1e1e1e;
+            position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 11px;
+            overflow: hidden; box-shadow: 0 0 20px rgba(102, 217, 239, 0.3); background: #1e1e1e;
         }
+        .iframe-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
         
-        .iframe-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* --- Avatar & Play Button Styles --- */
-        
+        /* Avatar & Play Button */
         .avatar-overlay {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 0 30px rgba(102, 217, 239, 0.5);
-            z-index: 99999;
-            border: 3px solid #66d9ef;
-            background: #000;
-            cursor: pointer; /* Indicates clickable */
+            position: fixed; bottom: 20px; right: 20px; width: 200px; height: 200px;
+            border-radius: 50%; overflow: hidden; box-shadow: 0 0 30px rgba(102, 217, 239, 0.5);
+            z-index: 99999; border: 3px solid #66d9ef; background: #000; cursor: pointer;
         }
-        
-        .avatar-overlay video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            background: #000;
-        }
-
-        /* Play Button Overlay */
+        .avatar-overlay video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
         .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            pointer-events: none; /* Let clicks pass through to container */
-            transition: opacity 0.3s ease;
-            z-index: 100000;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 50px; height: 50px; background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%; display: flex; justify-content: center; align-items: center;
+            pointer-events: none; transition: opacity 0.3s ease; z-index: 100000;
         }
-
-        /* Play Triangle Icon */
         .play-button::after {
-            content: '';
-            display: block;
-            width: 0; 
-            height: 0; 
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 16px solid #fff;
-            margin-left: 4px; /* Optical centering */
+            content: ''; display: block; width: 0; height: 0; 
+            border-top: 10px solid transparent; border-bottom: 10px solid transparent;
+            border-left: 16px solid #fff; margin-left: 4px;
         }
-
-        /* Hide button when 'playing' class is active */
-        .avatar-overlay.playing .play-button {
-            opacity: 0;
-        }
-
-        /* Show pause button on hover when playing */
-        .avatar-overlay.playing:hover .play-button {
-            opacity: 1;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
+        .avatar-overlay.playing .play-button { opacity: 0; }
+        .avatar-overlay.playing:hover .play-button { opacity: 1; background-color: rgba(0, 0, 0, 0.4); }
         .avatar-overlay.playing:hover .play-button::after {
-            /* Change triangle to pause bars */
-            width: 14px;
-            height: 16px;
-            border: none;
-            border-left: 5px solid #fff;
-            border-right: 5px solid #fff;
-            margin-left: 0;
-            background: transparent;
+            width: 14px; height: 16px; border: none;
+            border-left: 5px solid #fff; border-right: 5px solid #fff;
+            margin-left: 0; background: transparent;
         }
         
         @media (max-width: 767px) {
-            .avatar-overlay {
-                width: 120px;
-                height: 120px;
-                bottom: 10px;
-                right: 10px;
-            }
+            .avatar-overlay { width: 120px; height: 120px; bottom: 10px; right: 10px; }
         }
     </style>
 </head>
 <body>
+    
+    <div id="start-screen">
+        <p>> CLICK TO INITIALIZE_</p>
+    </div>
+
+    <audio id="typeSound" loop>
+        <source src="/audio/typing.mp3" type="audio/mpeg">
+    </audio>
+
     <a href="/" class="back-link">← Back to Terminal</a>
     <article>
-        <h1>{{ .Title }}</h1>
+        <h1>
+            <span id="typewriter-text"></span><span class="typewriter-cursor">&nbsp;</span>
+        </h1>
         
         {{ if .Params.featured_image }}
         <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="featured-image">
@@ -228,26 +182,20 @@
                 {{ end }}
                 <iframe src="https://www.youtube.com/embed/{{ $videoID }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             {{ else }}
-                <video controls>
-                    <source src="{{ .Params.video_url }}" type="video/mp4">
-                </video>
+                <video controls><source src="{{ .Params.video_url }}" type="video/mp4"></video>
             {{ end }}
         </div>
         {{ end }}
         
         {{ if .Params.audio_url }}
         <div class="audio-container">
-            <audio controls>
-                <source src="{{ .Params.audio_url }}" type="audio/mpeg">
-            </audio>
+            <audio controls><source src="{{ .Params.audio_url }}" type="audio/mpeg"></audio>
         </div>
         {{ end }}
         
         {{ if .Params.iframe_url }}
         <div class="iframe-container">
-            <div class="iframe-wrapper">
-                <iframe src="{{ .Params.iframe_url }}" allowfullscreen></iframe>
-            </div>
+            <div class="iframe-wrapper"><iframe src="{{ .Params.iframe_url }}" allowfullscreen></iframe></div>
         </div>
         {{ end }}
         
@@ -266,45 +214,80 @@
     {{ if .Params.avatar_video }}
     <div class="avatar-overlay" id="avatarOverlay">
         <div class="play-button"></div>
-
         <video loop playsinline webkit-playsinline>
             <source src="{{ .Params.avatar_video }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+    {{ end }}
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const container = document.getElementById('avatarOverlay');
             
-            // Check if container exists to avoid errors on pages without avatar
-            if (container) {
-                const video = container.querySelector('video');
-                
+            // --- VARIABLES ---
+            const startScreen = document.getElementById('start-screen');
+            const textToType = "{{ .Title }}";
+            const typeContainer = document.getElementById('typewriter-text');
+            const typeSound = document.getElementById('typeSound');
+            const avatarContainer = document.getElementById('avatarOverlay');
+            
+            let typeIndex = 0;
+            const typeSpeed = 100;
+
+            // --- TYPEWRITER FUNCTION ---
+            function typeWriter() {
+                if (typeIndex < textToType.length) {
+                    typeContainer.textContent += textToType.charAt(typeIndex);
+                    typeIndex++;
+                    setTimeout(typeWriter, typeSpeed);
+                } else {
+                    // STOP SOUND when finished
+                    if(typeSound) {
+                        typeSound.pause();
+                        typeSound.currentTime = 0;
+                    }
+                }
+            }
+
+            // --- START SEQUENCE ---
+            startScreen.addEventListener('click', function() {
+                // 1. Fade out start screen
+                startScreen.style.opacity = '0';
+                setTimeout(() => {
+                    startScreen.style.display = 'none';
+                    // Re-enable scrolling
+                    document.body.style.overflow = 'auto'; 
+                }, 500);
+
+                // 2. Reveal Content
+                document.body.classList.add('active');
+
+                // 3. Play Sound & Start Typing
+                if (typeContainer) {
+                    if (typeSound) {
+                        typeSound.volume = 0.5;
+                        // This play() is guaranteed to work because it's inside a click event
+                        typeSound.play().catch(e => console.error(e));
+                    }
+                    typeWriter();
+                }
+            });
+
+            // --- AVATAR VIDEO LOGIC (Separate from start screen) ---
+            if (avatarContainer) {
+                const video = avatarContainer.querySelector('video');
                 if (video) {
-                    container.addEventListener('click', function() {
+                    avatarContainer.addEventListener('click', function() {
                         if (video.paused) {
-                            // Play video
-                            const playPromise = video.play();
-                            
-                            if (playPromise !== undefined) {
-                                playPromise.then(_ => {
-                                    container.classList.add('playing');
-                                })
-                                .catch(error => {
-                                    console.error('Video play error:', error);
-                                });
-                            }
+                            video.play().then(() => avatarContainer.classList.add('playing')).catch(e => console.error(e));
                         } else {
-                            // Pause video
                             video.pause();
-                            container.classList.remove('playing');
+                            avatarContainer.classList.remove('playing');
                         }
                     });
                 }
             }
         });
     </script>
-    {{ end }}
 </body>
 </html>
