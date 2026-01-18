@@ -8,17 +8,20 @@ languageCode = "en-us"
 [Params.Terminal]
 scheme = "Molokai"
 userName = "detective"
-pcName = "cpd-terminal"
-workDir = "case-files"
-profile = "briefing.txt"
+pcName = "cpd"
+workDir = "casefiles"
+profile = "brief.txt"
 ps1Delay = 0
 stdoutDelay = 0
 commandDelay = 50
 titleDelay = 0
 contentDelay = 0
 description = """
-CHICAGO POLICE DEPARTMENT
-CASE FILE SYSTEM v2.1
+CASE FILE SYSTEM v0.0.1
+
+The
+Unsolved 
+Tylenol Murder Case
 
 Welcome, Detective.
 
@@ -32,7 +35,7 @@ Navigate case files below.
 use = true
 folderName = "case_files"
 files = [ 
-  ["START: Case Briefing", "/tylenol-case/"],
+  ["Start Here: Case Briefing", "/tylenol-case/"],
   ["Victims (7 total)", "/tylenol-case/victims/"],
   ["Suspects", "/tylenol-case/suspects/"],
   ["Locations", "/tylenol-case/locations/"],
