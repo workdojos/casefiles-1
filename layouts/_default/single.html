@@ -30,7 +30,10 @@
             }
         }
         
-        h1, h2, h3 { color: #66d9ef; }
+        h1, h2, h3 { 
+            color: #66d9ef;
+            text-align: center;
+        }
         a { color: #a6e22e; text-decoration: none; }
         a:hover { text-decoration: underline; }
         pre { 
@@ -42,25 +45,28 @@
         }
         code { color: #e6db74; }
         hr { border: 1px solid #49483e; margin: 30px 0; }
-        .back-link { margin-bottom: 30px; display: inline-block; }
+        .back-link { 
+            margin-bottom: 30px; 
+            display: inline-block;
+        }
         .page-list { list-style: none; padding: 0; }
         .page-list li { margin: 15px 0; }
         
-        /* Featured image */
+        /* Featured image - centered */
         .featured-image {
             max-width: 400px;
             width: 100%;
             height: auto;
-            margin-bottom: 30px;
+            margin: 0 auto 30px auto;
             border-radius: 11px;
             box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
             display: block;
         }
         
-        /* Video container */
+        /* Video container - centered */
         .video-container {
             max-width: 600px;
-            margin-bottom: 30px;
+            margin: 0 auto 30px auto;
             border-radius: 11px;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
@@ -79,33 +85,11 @@
             border: none;
         }
         
-        /* Two column layout - desktop only */
-        .content-wrapper {
-            display: block;
-        }
-        
-        @media (min-width: 768px) {
-            .content-wrapper {
-                display: flex;
-                gap: 40px;
-                align-items: flex-start;
-            }
-            
-            .main-content {
-                flex: 1 1 60%;
-            }
-            
-            .sidebar-content {
-                flex: 0 0 35%;
-                position: sticky;
-                top: 20px;
-            }
-        }
-        
-        /* Iframe container */
+        /* Iframe container - centered, after video */
         .iframe-container {
+            max-width: 600px;
             width: 100%;
-            margin-bottom: 30px;
+            margin: 0 auto 30px auto;
         }
         
         .iframe-wrapper {
@@ -127,13 +111,14 @@
             border: none;
         }
         
-        /* Audio player */
+        /* Audio player - after text content */
         .audio-container {
-            margin-bottom: 30px;
+            margin: 30px auto;
             padding: 20px;
             background: #1e1e1e;
             border-radius: 11px;
             box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
+            max-width: 800px;
         }
         
         .audio-container audio {
@@ -199,38 +184,32 @@
         </div>
         {{ end }}
         
-        <div class="content-wrapper">
-            <div class="main-content">
-                {{ if .Params.audio_url }}
-                <div class="audio-container">
-                    <audio controls>
-                        <source src="{{ .Params.audio_url }}" type="audio/mpeg">
-                    </audio>
-                </div>
-                {{ end }}
-                
-                {{ .Content }}
-                
-                {{ if .Pages }}
-                <h2>Pages in this section:</h2>
-                <ul class="page-list">
-                {{ range .Pages }}
-                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                {{ end }}
-                </ul>
-                {{ end }}
+        {{ if .Params.iframe_url }}
+        <div class="iframe-container">
+            <div class="iframe-wrapper">
+                <iframe src="{{ .Params.iframe_url }}" allowfullscreen></iframe>
             </div>
-            
-            {{ if .Params.iframe_url }}
-            <div class="sidebar-content">
-                <div class="iframe-container">
-                    <div class="iframe-wrapper">
-                        <iframe src="{{ .Params.iframe_url }}" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-            {{ end }}
         </div>
+        {{ end }}
+        
+        {{ .Content }}
+        
+        {{ if .Params.audio_url }}
+        <div class="audio-container">
+            <audio controls>
+                <source src="{{ .Params.audio_url }}" type="audio/mpeg">
+            </audio>
+        </div>
+        {{ end }}
+        
+        {{ if .Pages }}
+        <h2>Pages in this section:</h2>
+        <ul class="page-list">
+        {{ range .Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        </ul>
+        {{ end }}
     </article>
     
     {{ if .Params.avatar_video }}
