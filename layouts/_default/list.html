@@ -122,7 +122,8 @@
             border: none;
         }
         
-        /* Avatar overlay - force video to show */
+        /* --- Avatar & Play Button Styles --- */
+        
         .avatar-overlay {
             position: fixed;
             bottom: 20px;
@@ -135,6 +136,7 @@
             z-index: 99999;
             border: 3px solid #66d9ef;
             background: #000;
+            cursor: pointer; /* Indicates clickable */
         }
         
         .avatar-overlay video {
@@ -143,6 +145,57 @@
             object-fit: cover;
             display: block;
             background: #000;
+        }
+
+        /* Play Button Overlay */
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none; /* Let clicks pass through to container */
+            transition: opacity 0.3s ease;
+            z-index: 100000;
+        }
+
+        /* Play Triangle Icon */
+        .play-button::after {
+            content: '';
+            display: block;
+            width: 0; 
+            height: 0; 
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 16px solid #fff;
+            margin-left: 4px; /* Optical centering */
+        }
+
+        /* Hide button when 'playing' class is active */
+        .avatar-overlay.playing .play-button {
+            opacity: 0;
+        }
+
+        /* Show pause button on hover when playing */
+        .avatar-overlay.playing:hover .play-button {
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .avatar-overlay.playing:hover .play-button::after {
+            /* Change triangle to pause bars */
+            width: 14px;
+            height: 16px;
+            border: none;
+            border-left: 5px solid #fff;
+            border-right: 5px solid #fff;
+            margin-left: 0;
+            background: transparent;
         }
         
         @media (max-width: 767px) {
@@ -211,18 +264,44 @@
     </article>
     
     {{ if .Params.avatar_video }}
-    <div class="avatar-overlay">
-        <video autoplay loop unmuted playsinline webkit-playsinline>
+    <div class="avatar-overlay" id="avatarOverlay">
+        <div class="play-button"></div>
+
+        <video loop playsinline webkit-playsinline>
             <source src="{{ .Params.avatar_video }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+
     <script>
-        // Force video to play
         document.addEventListener('DOMContentLoaded', function() {
-            const avatarVideo = document.querySelector('.avatar-overlay video');
-            if (avatarVideo) {
-                avatarVideo.play().catch(e => console.error('Avatar video error:', e));
+            const container = document.getElementById('avatarOverlay');
+            
+            // Check if container exists to avoid errors on pages without avatar
+            if (container) {
+                const video = container.querySelector('video');
+                
+                if (video) {
+                    container.addEventListener('click', function() {
+                        if (video.paused) {
+                            // Play video
+                            const playPromise = video.play();
+                            
+                            if (playPromise !== undefined) {
+                                playPromise.then(_ => {
+                                    container.classList.add('playing');
+                                })
+                                .catch(error => {
+                                    console.error('Video play error:', error);
+                                });
+                            }
+                        } else {
+                            // Pause video
+                            video.pause();
+                            container.classList.remove('playing');
+                        }
+                    });
+                }
             }
         });
     </script>
