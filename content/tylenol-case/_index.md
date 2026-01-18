@@ -2,9 +2,9 @@
 title: "Tylenol Murders - Case Briefing"
 date: 1982-09-29
 draft: false
-featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims-part-2.png"
+featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims.png"
 video_url: ""
-iframe_url: "https://tylenol-murders.netlify.app"
+iframe_url: ""
 audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/tcgty.wav"
 avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/briefing/briefing-avatar.mp4"
 ---
