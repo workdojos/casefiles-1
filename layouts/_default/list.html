@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <style>
+        body {
+            background-color: #272822;
+            color: #f8f8f2;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            padding: 20px 40px;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 { color: #66d9ef; }
+        a { color: #a6e22e; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        pre { background: #1e1e1e; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        code { color: #e6db74; }
+        hr { border: 1px solid #49483e; margin: 30px 0; }
+        .back-link { margin-bottom: 30px; display: inline-block; }
+        .page-list { list-style: none; padding: 0; }
+        .page-list li { margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-link">← Back to Terminal</a>
+    <article>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+        
+        {{ if .Pages }}
+        <h2>Pages in this section:</h2>
+        <ul class="page-list">
+        {{ range .Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        </ul>
+        {{ end }}
+    </article>
+</body>
+</html>
