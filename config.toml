@@ -1,4 +1,4 @@
-baseURL = "https://your-site.netlify.app/"
+baseURL = "https://tylenol-murders.netlify.app"
 title = "Tylenol Murders Case Files"
 theme = "hugo-theme-shell"
 languageCode = "en-us"
