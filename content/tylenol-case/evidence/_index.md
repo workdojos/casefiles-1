@@ -1,7 +1,12 @@
 ---
-title: "Physical Evidence"
+title: "Tylenol Murders - Physical Evidence"
 date: 1982-09-29
 draft: false
+featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/evidence/evidence.png"
+video_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/evidence/evidence.mp4"
+iframe_url: "https://tylenol-murders.netlify.app"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/evidence/evidence.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/suspects/evidence-avatar.mp4"
 ---
 
 {{< typewriter >}}

@@ -9,24 +9,203 @@
             background-color: #272822;
             color: #f8f8f2;
             font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-            padding: 20px 40px;
+            padding: 20px;
             line-height: 1.6;
-            max-width: 1200px;
-            margin: 0 auto;
+            margin: 0;
         }
+        
+        /* Mobile styles (default) */
+        article {
+            max-width: 100%;
+            margin: 0 auto;
+            font-size: 1.1em;
+        }
+        
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            body {
+                padding: 40px;
+            }
+            article {
+                max-width: 1400px;
+                font-size: 1.15em;
+            }
+        }
+        
         h1, h2, h3 { color: #66d9ef; }
         a { color: #a6e22e; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        pre { background: #1e1e1e; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        pre { 
+            background: #1e1e1e; 
+            padding: 15px; 
+            border-radius: 5px; 
+            overflow-x: auto;
+        }
         code { color: #e6db74; }
         hr { border: 1px solid #49483e; margin: 30px 0; }
         .back-link { margin-bottom: 30px; display: inline-block; }
+        .page-list { list-style: none; padding: 0; }
+        .page-list li { margin: 15px 0; }
+        
+        /* Featured image */
+        .featured-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 11px;
+            box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
+        }
+        
+        /* Video container */
+        .video-container {
+            margin-bottom: 30px;
+            border-radius: 11px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
+        }
+        
+        .video-container video,
+        .video-container iframe {
+            width: 100%;
+            height: auto;
+            min-height: 400px;
+            display: block;
+        }
+        
+        /* Iframe container - 16:9 aspect ratio */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            border-radius: 11px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
+            background: #1e1e1e;
+        }
+        
+        .iframe-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Audio player */
+        .audio-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 11px;
+            box-shadow: 0 0 20px rgba(102, 217, 239, 0.3);
+        }
+        
+        .audio-container audio {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <a href="/" class="back-link">← Back to Terminal</a>
     <article>
+        <h1>{{ .Title }}</h1>
+        
+        {{ if .Params.featured_image }}
+        <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="featured-image">
+        {{ end }}
+        
+        {{ if .Params.video_url }}
+        <div class="video-container">
+            {{ if findRE "youtube.com|youtu.be" .Params.video_url }}
+                {{ $videoID := "" }}
+                {{ if findRE "youtu.be" .Params.video_url }}
+                    {{ $videoID = replaceRE ".*youtu.be/([^?]+).*" "$1" .Params.video_url }}
+                {{ else }}
+                    {{ $videoID = replaceRE ".*[?&]v=([^&]+).*" "$1" .Params.video_url }}
+                {{ end }}
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/{{ $videoID }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {{ else }}
+                <video controls>
+                    <source src="{{ .Params.video_url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            {{ end }}
+        </div>
+        {{ end }}
+        
+        {{ if .Params.iframe_url }}
+        <div class="iframe-container">
+            <div class="iframe-wrapper">
+                <iframe src="{{ .Params.iframe_url }}" allowfullscreen></iframe>
+            </div>
+        </div>
+        {{ end }}
+        
+        {{ if .Params.audio_url }}
+        <div class="audio-container">
+            <audio controls>
+                <source src="{{ .Params.audio_url }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        {{ end }}
+        
         {{ .Content }}
+        
+        {{ if .Pages }}
+        <h2>Pages in this section:</h2>
+        <ul class="page-list">
+        {{ range .Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        </ul>
+        {{ end }}
     </article>
+    
+    {{ if .Params.avatar_video }}
+    <div class="avatar-overlay">
+        <video autoplay loop muted playsinline>
+            <source src="{{ .Params.avatar_video }}" type="video/mp4">
+        </video>
+    </div>
+    
+    <style>
+        .avatar-overlay {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(102, 217, 239, 0.5);
+            z-index: 9999;
+            border: 3px solid #66d9ef;
+        }
+        
+        .avatar-overlay video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @media (max-width: 767px) {
+            .avatar-overlay {
+                width: 120px;
+                height: 120px;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+    {{ end }}
 </body>
 </html>

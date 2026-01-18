@@ -1,11 +1,16 @@
 ---
-title: "Case Timeline"
+title: "Tylenol Murders - Case sequence"
 date: 1982-09-29
 draft: false
+featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/sequence.png"
+video_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/sequence.mp4"
+iframe_url: "https://tylenol-murders.netlify.app"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/sequence.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/suspects/sequence.mp4"
 ---
 
 {{< typewriter >}}
-TIMELINE: SEPTEMBER 29 - OCTOBER 1, 1982
+sequence: SEPTEMBER 29 - OCTOBER 1, 1982
 
 DAY 1: WEDNESDAY, SEPT 29, 1982
 
@@ -80,13 +85,13 @@ Case becomes national crisis.
 
 ---
 
-**Detailed Timelines:**
-- [September 29 (Day 1) →](/tylenol-case/timeline/day-1/)
-- [September 30 (Day 2) →](/tylenol-case/timeline/day-2/)
-- [October 1-2 (Day 3-4) →](/tylenol-case/timeline/day-3/)
+**Detailed sequences:**
+- [September 29 (Day 1) →](/tylenol-case/sequence/day-1/)
+- [September 30 (Day 2) →](/tylenol-case/sequence/day-2/)
+- [October 1-2 (Day 3-4) →](/tylenol-case/sequence/day-3/)
 
 **Navigate:**
-- [Investigation Timeline →](/tylenol-case/timeline/investigation/)
+- [Investigation sequence →](/tylenol-case/sequence/investigation/)
 - [Go to Victims →](/tylenol-case/victims/)
 - [Go to Evidence →](/tylenol-case/evidence/)
 - [Back to Overview →](/tylenol-case/)

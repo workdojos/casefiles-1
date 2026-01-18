@@ -1,7 +1,12 @@
 ---
-title: "Crime Scene Locations"
+title: "Tylenol Murders - Crime Scene Locations"
 date: 1982-09-29
 draft: false
+featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/locations/locations.png"
+video_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/locations/locations.mp4"
+iframe_url: "https://tylenol-murders.netlify.app"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/locations/locations.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/suspects/locations-avatar.mp4"
 ---
 
 {{< typewriter >}}

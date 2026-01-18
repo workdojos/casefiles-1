@@ -1,7 +1,12 @@
 ---
-title: "Suspects - Part 1"
+title: "Tylenol Murders - Suspects - Part 1"
 date: 1982-10-05
 draft: false
+featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/suspects/suspects.png"
+video_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/suspects/suspects.mp4"
+iframe_url: "https://tylenol-murders.netlify.app"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/suspects/suspects.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/suspects/suspects-avatar.mp4"
 ---
 
 {{< typewriter >}}
