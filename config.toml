@@ -33,7 +33,7 @@ Navigate case files below.
 
 [Params.Tree]
 use = true
-folderName = "case_files"
+folderName = "files"
 files = [ 
   ["Start Here: Case Briefing", "/tylenol-case/"],
   ["Victims (7 total)", "/tylenol-case/victims/"],
