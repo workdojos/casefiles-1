@@ -1,0 +1,45 @@
+baseURL = "https://your-site.netlify.app/"
+title = "Tylenol Murders Case Files"
+theme = "shell"
+languageCode = "en-us"
+
+[Params]
+  description = "Chicago Tylenol Murders Investigation Files"
+  
+  [Params.Terminal]
+  scheme = "Molokai"
+  userName = "detective"
+  pcName = "cpd-terminal"
+  workDir = "case-files"
+  profile = "briefing.txt"
+  
+  ps1Delay = 0
+  stdoutDelay = 0
+  commandDelay = 50
+  titleDelay = 0
+  contentDelay = 0
+  
+  description = """
+  CHICAGO POLICE DEPARTMENT
+  CASE FILE SYSTEM v2.1
+  
+  Welcome, Detective.
+  
+  Tylenol Murders - 1982
+  7 victims. Unsolved.
+  
+  Navigate case files below.
+  """
+  
+  [Params.Tree]
+  use = true
+  folderName = "case_files"
+  files = [ 
+    ["START: Case Briefing", "/tylenol-case/"],
+    ["Victims (7 total)", "/tylenol-case/victims/"],
+    ["Suspects", "/tylenol-case/suspects/"],
+    ["Locations", "/tylenol-case/locations/"],
+    ["Timeline", "/tylenol-case/timeline/"],
+    ["Evidence", "/tylenol-case/evidence/"],
+    ["Documents", "/tylenol-case/documents/"],
+  ]
