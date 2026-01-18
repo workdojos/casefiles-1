@@ -1,10 +1,34 @@
 baseURL = "https://your-site.netlify.app/"
 title = "Tylenol Murders Case Files"
-theme = "github.com/Yukuro/hugo-theme-shell"
+theme = "hugo-theme-shell"
 languageCode = "en-us"
 
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[languages]
+  [languages.en]
+    title = "Tylenol Case Files"
+    weight = 1
+    contentDir = "content"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
 [Params]
-  description = "Chicago Tylenol Murders Investigation Files"
+  text_color = ""
+  author = "Chicago Police Department"
+  favicon = ""
+  site_logo = ""
+  description = "Chicago Tylenol Murders Investigation Files - 1982"
+  background_color_class = "bg-black"
+  recent_posts_number = 3
   
   [Params.Terminal]
   scheme = "Molokai"
