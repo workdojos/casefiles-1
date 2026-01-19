@@ -296,19 +296,19 @@
             }
             typeWriter();
 
-            // 4. Trigger Soft Background Ambience (10 seconds total)
+            // 4. Trigger Soft Background Ambience (10 seconds total - HARD STOP)
             if (ambienceSound) {
-                const targetVolume = 0.12;    // Further reduced for softer ambience
+                const targetVolume = 0.12;    // Soft ambience volume
                 const fadeInDuration = 2;     // 2 second fade-in
                 const fadeOutDuration = 4;    // 4 second fade-out
-                const totalPlayTime = 10;     // Total duration: 10 seconds
+                const totalPlayTime = 10;     // Total duration: 10 seconds MAX
                 
                 ambienceSound.volume = 0;
                 ambienceSound.currentTime = 0; // Start from beginning
                 ambienceSound.play().catch(e => console.error("Ambience audio error:", e));
 
                 // --- FADE IN ---
-                let fadeInInterval = 50; // Smoother fade with more frequent updates
+                let fadeInInterval = 50;
                 let fadeInSteps = (fadeInDuration * 1000) / fadeInInterval;
                 let fadeInIncrement = targetVolume / fadeInSteps;
 
@@ -322,13 +322,19 @@
                 }, fadeInInterval);
 
                 // --- FADE OUT ---
-                // Start fading out after (Total Time - FadeOut Duration) 
-                // In this case: 10s - 4s = starts at 6 seconds
+                // Start fading out at 6 seconds (10s total - 4s fade)
                 const startTimeForFadeOut = (totalPlayTime - fadeOutDuration) * 1000;
 
                 setTimeout(() => {
                     fadeAudio(ambienceSound, fadeOutDuration);
                 }, startTimeForFadeOut);
+
+                // --- HARD STOP at exactly 10 seconds (FAILSAFE) ---
+                setTimeout(() => {
+                    ambienceSound.pause();
+                    ambienceSound.currentTime = 0;
+                    ambienceSound.volume = 0;
+                }, totalPlayTime * 1000);
             }
 
             // 5. Autoplay Avatar (Optional - keep if you want the avatar to speak on start)
