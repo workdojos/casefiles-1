@@ -1,77 +1,47 @@
 ---
-title: "Tylenol Murders - Victims - Part 1"
+title: "Tylenol Murders - agent - Part 1"
 date: 1982-09-29
 draft: false
-featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims.png"
+featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/agent/agent.png"
 video_url: ""
 iframe_url: ""
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/tcgty.wav"
-avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims-avatar.mp4"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/agent/agent.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/agent/agent-avatar.mp4"
 ---
 
 {{< typewriter >}}
-VICTIM FILES: 1-3 of 7
+AGENT PROFILE: RAG DETECTIVE
 
-VICTIM #1: MARY KELLERMAN
-Age: 12 years old
-Date: September 29, 1982, 7:00 AM
-Location: 1425 Armstrong Lane
-         Elk Grove Village, IL
+This agent performs retrieval augmented generation for precision.
+It searches trusted corpora before any reasoning begins.
+Answers are grounded in verified sources and citations.
 
-Mary woke with cold symptoms.
-Her parents gave her Extra-Strength
-Tylenol. She collapsed minutes later.
-Pronounced dead at 9:30 AM.
+Core mission is fast accurate investigative analysis.
+It correlates signals across tools datasets and APIs.
+Every query triggers structured evidence collection.
 
-First known victim.
-Death initially thought to be
-from stroke or heart condition.
+The agent cross examines logs documents and live endpoints.
+It flags inconsistencies and ranks confidence automatically.
+Results are concise actionable and traceable.
 
----
+Tooling includes vector search semantic ranking and caching.
+APIs are queried in parallel for speed.
+Latency is minimized through adaptive retrieval strategies.
 
-VICTIM #2: ADAM JANUS
-Age: 27 years old
-Date: September 29, 1982, 11:30 AM
-Location: 1540 Woodhaven Ct
-         Arlington Heights, IL
-
-Postal worker experiencing
-minor chest pain after work.
-Took Tylenol at home.
-Collapsed shortly after.
-Died at hospital.
-
-Family gathered at his home
-after his death.
-
----
-
-VICTIM #3: STANLEY JANUS
-Age: 25 years old  
-Date: September 29, 1982, 5:30 PM
-Location: Same as Adam (brother)
-
-Stanley was Adam's younger brother.
-At family gathering following
-Adam's death, Stanley experienced
-headache from stress.
-
-Took Tylenol from Adam's bottle.
-Collapsed within minutes.
-
-His wife Theresa also took pills
-from the same bottle.
+Use cases include fraud analysis incident response research.
+Also supports intelligence synthesis and anomaly detection.
+Output is optimized for human and machine consumption.
 {{< /typewriter >}}
 
 ---
 
 **View Full Profiles:**
-- [Mary Kellerman Details →](/tylenol-case/victims/mary-kellerman/)
-- [Adam Janus Details →](/tylenol-case/victims/adam-janus/)
-- [Stanley Janus Details →](/tylenol-case/victims/stanley-janus/)
+- [Mary Kellerman Details →](/tylenol-case/agent/mary-kellerman/)
+- [Adam Janus Details →](/tylenol-case/agent/adam-janus/)
+- [Stanley Janus Details →](/tylenol-case/agent/stanley-janus/)
 
 **Navigate:**
-- [Next Victims (4-7) →](/tylenol-case/victims/part-2/)
+- [Next agent (4-7) →](/tylenol-case/agent/part-2/)
 - [Back to Overview →](/tylenol-case/)
 - [Go to Suspects →](/tylenol-case/suspects/)
 - [Go to Locations →](/tylenol-case/locations/)
