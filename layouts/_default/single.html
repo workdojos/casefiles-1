@@ -295,21 +295,38 @@
             }
             typeWriter();
 
-            // 4. Trigger Soft Background Ambience
+            // 4. Trigger Soft Background Ambience (Shortened to 15s)
             if (ambienceSound) {
-                ambienceSound.volume = 0.25; // Half the volume of the main one
+                const targetVolume = 0.20;    // Reduced volume by 20% (was 0.25)
+                const fadeInDuration = 4;     // 4 second fade-in
+                const fadeOutDuration = 6;    // 6 second fade-out
+                const totalPlayTime = 15;     // Total duration before it stops
+                
+                ambienceSound.volume = 0;
                 ambienceSound.play().catch(e => console.error("Ambience audio error:", e));
 
-                // TIMING LOGIC:
-                // File is 82 seconds. Fade duration is 22 seconds.
-                // We start the fade at 60 seconds (82 - 22).
-                const totalDuration = 82; 
-                const fadeDuration = 22;
-                const startTimeForFade = (totalDuration - fadeDuration) * 1000;
+                // --- FADE IN ---
+                let fadeInInterval = 100; 
+                let fadeInSteps = (fadeInDuration * 1000) / fadeInInterval;
+                let fadeInIncrement = targetVolume / fadeInSteps;
+
+                let fadeInEffect = setInterval(() => {
+                    if (ambienceSound.volume < targetVolume - fadeInIncrement) {
+                        ambienceSound.volume += fadeInIncrement;
+                    } else {
+                        ambienceSound.volume = targetVolume;
+                        clearInterval(fadeInEffect);
+                    }
+                }, fadeInInterval);
+
+                // --- FADE OUT ---
+                // Start fading out after (Total Time - FadeOut Duration) 
+                // In this case: 15s - 6s = starts at 9 seconds
+                const startTimeForFadeOut = (totalPlayTime - fadeOutDuration) * 1000;
 
                 setTimeout(() => {
-                    fadeAudio(ambienceSound, fadeDuration);
-                }, startTimeForFade);
+                    fadeAudio(ambienceSound, fadeOutDuration);
+                }, startTimeForFadeOut);
             }
 
             // 5. Autoplay Avatar (Optional - keep if you want the avatar to speak on start)
