@@ -157,9 +157,13 @@
         <p>> CLICK TO INITIALIZE_</p>
     </div>
 
-    <audio id="typeSound" loop>
-        <source src="/audio/typing.mp3" type="audio/mpeg">
-    </audio>
+<audio id="typeSound">
+    <source src="/audio/typing.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="ambienceSound">
+    <source src="/audio/typing.mp3" type="audio/mpeg">
+</audio>
 
     <a href="/" class="back-link">← Back to Terminal</a>
     <article>
@@ -221,73 +225,118 @@
     </div>
     {{ end }}
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            // --- VARIABLES ---
-            const startScreen = document.getElementById('start-screen');
-            const textToType = "{{ .Title }}";
-            const typeContainer = document.getElementById('typewriter-text');
-            const typeSound = document.getElementById('typeSound');
-            const avatarContainer = document.getElementById('avatarOverlay');
-            
-            let typeIndex = 0;
-            const typeSpeed = 100;
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // --- VARIABLES ---
+        const startScreen = document.getElementById('start-screen');
+        const textToType = "{{ .Title }}";
+        const typeContainer = document.getElementById('typewriter-text');
+        
+        // Audio Elements
+        const typeSound = document.getElementById('typeSound');        // Loud (for Title)
+        const ambienceSound = document.getElementById('ambienceSound'); // Soft (Long duration)
+        
+        const avatarContainer = document.getElementById('avatarOverlay');
+        
+        let typeIndex = 0;
+        const typeSpeed = 100;
 
-            // --- TYPEWRITER FUNCTION ---
-            function typeWriter() {
-                if (typeIndex < textToType.length) {
-                    typeContainer.textContent += textToType.charAt(typeIndex);
-                    typeIndex++;
-                    setTimeout(typeWriter, typeSpeed);
+        // --- FADE OUT LOGIC ---
+        // This function smoothly lowers volume over a set number of seconds
+        function fadeAudio(audioElement, durationSeconds) {
+            const startVolume = audioElement.volume;
+            const fadeInterval = 100; // updates every 100ms
+            const totalSteps = (durationSeconds * 1000) / fadeInterval;
+            const volumeStep = startVolume / totalSteps;
+
+            const fadeEffect = setInterval(function () {
+                if (audioElement.volume > volumeStep) {
+                    audioElement.volume -= volumeStep;
                 } else {
-                    // STOP SOUND when finished
-                    if(typeSound) {
-                        typeSound.pause();
-                        typeSound.currentTime = 0;
-                    }
+                    audioElement.volume = 0;
+                    audioElement.pause();
+                    clearInterval(fadeEffect);
+                }
+            }, fadeInterval);
+        }
+
+        // --- TITLE TYPEWRITER FUNCTION ---
+        function typeWriter() {
+            if (typeIndex < textToType.length) {
+                typeContainer.textContent += textToType.charAt(typeIndex);
+                typeIndex++;
+                setTimeout(typeWriter, typeSpeed);
+            } else {
+                // STOP LOUD SOUND when the title is finished
+                if(typeSound) {
+                    typeSound.pause();
+                    typeSound.currentTime = 0;
                 }
             }
+        }
 
-            // --- START SEQUENCE ---
-            startScreen.addEventListener('click', function() {
-                // 1. Fade out start screen
-                startScreen.style.opacity = '0';
+        // --- START SEQUENCE ---
+        startScreen.addEventListener('click', function() {
+            // 1. Hide Start Screen
+            startScreen.style.opacity = '0';
+            setTimeout(() => {
+                startScreen.style.display = 'none';
+                document.body.style.overflow = 'auto'; 
+            }, 500);
+
+            // 2. Reveal Content
+            document.body.classList.add('active');
+
+            // 3. Trigger Loud Title Typing
+            if (typeSound) {
+                typeSound.volume = 0.5;
+                typeSound.play().catch(e => console.error("Loud audio error:", e));
+            }
+            typeWriter();
+
+            // 4. Trigger Soft Background Ambience
+            if (ambienceSound) {
+                ambienceSound.volume = 0.25; // Half the volume of the main one
+                ambienceSound.play().catch(e => console.error("Ambience audio error:", e));
+
+                // TIMING LOGIC:
+                // File is 82 seconds. Fade duration is 22 seconds.
+                // We start the fade at 60 seconds (82 - 22).
+                const totalDuration = 82; 
+                const fadeDuration = 22;
+                const startTimeForFade = (totalDuration - fadeDuration) * 1000;
+
                 setTimeout(() => {
-                    startScreen.style.display = 'none';
-                    // Re-enable scrolling
-                    document.body.style.overflow = 'auto'; 
-                }, 500);
+                    fadeAudio(ambienceSound, fadeDuration);
+                }, startTimeForFade);
+            }
 
-                // 2. Reveal Content
-                document.body.classList.add('active');
-
-                // 3. Play Sound & Start Typing
-                if (typeContainer) {
-                    if (typeSound) {
-                        typeSound.volume = 0.5;
-                        // This play() is guaranteed to work because it's inside a click event
-                        typeSound.play().catch(e => console.error(e));
-                    }
-                    typeWriter();
-                }
-            });
-
-            // --- AVATAR VIDEO LOGIC (Separate from start screen) ---
+            // 5. Autoplay Avatar (Optional - keep if you want the avatar to speak on start)
             if (avatarContainer) {
-                const video = avatarContainer.querySelector('video');
-                if (video) {
-                    avatarContainer.addEventListener('click', function() {
-                        if (video.paused) {
-                            video.play().then(() => avatarContainer.classList.add('playing')).catch(e => console.error(e));
-                        } else {
-                            video.pause();
-                            avatarContainer.classList.remove('playing');
-                        }
-                    });
+                const avVideo = avatarContainer.querySelector('video');
+                if (avVideo) {
+                    avVideo.muted = false;
+                    avVideo.play().then(() => avatarContainer.classList.add('playing'));
                 }
             }
         });
-    </script>
+
+        // --- AVATAR CLICK TOGGLE (Pause/Play) ---
+        if (avatarContainer) {
+            const video = avatarContainer.querySelector('video');
+            if (video) {
+                avatarContainer.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play().then(() => avatarContainer.classList.add('playing'));
+                    } else {
+                        video.pause();
+                        avatarContainer.classList.remove('playing');
+                    }
+                });
+            }
+        }
+    });
+</script>
 </body>
 </html>
