@@ -162,7 +162,7 @@
 </audio>
 
 <audio id="ambienceSound">
-    <source src="/audio/typing.mp3" type="audio/mpeg">
+    <source src="/audio/typing-ambient.mp3" type="audio/mpeg">
 </audio>
 
     <a href="/" class="back-link">← Back to Terminal</a>
@@ -232,21 +232,17 @@
         const startScreen = document.getElementById('start-screen');
         const textToType = "{{ .Title }}";
         const typeContainer = document.getElementById('typewriter-text');
-        
-        // Audio Elements
-        const typeSound = document.getElementById('typeSound');        // Loud (for Title)
-        const ambienceSound = document.getElementById('ambienceSound'); // Soft (Long duration)
-        
+        const typeSound = document.getElementById('typeSound');
+        const ambienceSound = document.getElementById('ambienceSound');
         const avatarContainer = document.getElementById('avatarOverlay');
         
         let typeIndex = 0;
         const typeSpeed = 100;
 
-        // --- FADE OUT LOGIC ---
-        // This function smoothly lowers volume over a set number of seconds
+        // --- AUDIO FADE-OUT LOGIC ---
         function fadeAudio(audioElement, durationSeconds) {
             const startVolume = audioElement.volume;
-            const fadeInterval = 100; // updates every 100ms
+            const fadeInterval = 100; 
             const totalSteps = (durationSeconds * 1000) / fadeInterval;
             const volumeStep = startVolume / totalSteps;
 
@@ -256,6 +252,7 @@
                 } else {
                     audioElement.volume = 0;
                     audioElement.pause();
+                    audioElement.currentTime = 0;
                     clearInterval(fadeEffect);
                 }
             }, fadeInterval);
@@ -268,7 +265,6 @@
                 typeIndex++;
                 setTimeout(typeWriter, typeSpeed);
             } else {
-                // STOP LOUD SOUND when the title is finished
                 if(typeSound) {
                     typeSound.pause();
                     typeSound.currentTime = 0;
@@ -276,50 +272,60 @@
             }
         }
 
-        // --- START SEQUENCE ---
+        // --- START SEQUENCE (INITIALIZE CLICK) ---
         startScreen.addEventListener('click', function() {
-            // 1. Hide Start Screen
+            // UI Transition
             startScreen.style.opacity = '0';
             setTimeout(() => {
                 startScreen.style.display = 'none';
                 document.body.style.overflow = 'auto'; 
             }, 500);
-
-            // 2. Reveal Content
             document.body.classList.add('active');
 
-            // 3. Trigger Loud Title Typing
+            // 1. Play Loud Title Typing Sound
             if (typeSound) {
                 typeSound.volume = 0.5;
-                typeSound.play().catch(e => console.error("Loud audio error:", e));
+                typeSound.play().catch(e => console.error(e));
             }
             typeWriter();
 
-            // 4. Trigger Soft Background Ambience
+            // 2. Play Soft Ambience (Autoplays unmuted on this click)
             if (ambienceSound) {
-                ambienceSound.volume = 0.25; // Half the volume of the main one
-                ambienceSound.play().catch(e => console.error("Ambience audio error:", e));
+                const targetVolume = 0.16;    // Volume reduced 20% from 0.20
+                const fadeInDuration = 4;     // 4s Fade-in
+                const fadeOutDuration = 6;    // 6s Fade-out
+                const totalPlayTime = 15;     // Total duration
+                
+                ambienceSound.volume = 0;
+                ambienceSound.muted = false;  // Ensure unmuted
+                ambienceSound.play().catch(e => console.error(e));
 
-                // TIMING LOGIC:
-                // File is 82 seconds. Fade duration is 22 seconds.
-                // We start the fade at 60 seconds (82 - 22).
-                const totalDuration = 82; 
-                const fadeDuration = 22;
-                const startTimeForFade = (totalDuration - fadeDuration) * 1000;
+                // Fade In
+                let fadeInSteps = (fadeInDuration * 1000) / 100;
+                let fadeInIncrement = targetVolume / fadeInSteps;
+                let fadeInEffect = setInterval(() => {
+                    if (ambienceSound.volume < targetVolume - fadeInIncrement) {
+                        ambienceSound.volume += fadeInIncrement;
+                    } else {
+                        ambienceSound.volume = targetVolume;
+                        clearInterval(fadeInEffect);
+                    }
+                }, 100);
 
+                // Fade Out (Starts at 9 seconds)
+                const startTimeForFadeOut = (totalPlayTime - fadeOutDuration) * 1000;
                 setTimeout(() => {
-                    fadeAudio(ambienceSound, fadeDuration);
-                }, startTimeForFade);
+                    fadeAudio(ambienceSound, fadeOutDuration);
+                }, startTimeForFadeOut);
+                
+                // Hard Stop Failsafe at 15s
+                setTimeout(() => {
+                    ambienceSound.pause();
+                    ambienceSound.currentTime = 0;
+                }, totalPlayTime * 1000);
             }
-
-            // 5. Autoplay Avatar (Optional - keep if you want the avatar to speak on start)
-            if (avatarContainer) {
-                const avVideo = avatarContainer.querySelector('video');
-                if (avVideo) {
-                    avVideo.muted = false;
-                    avVideo.play().then(() => avatarContainer.classList.add('playing'));
-                }
-            }
+            
+            // NOTE: Avatar Autoplay was removed from here so it only plays on click.
         });
 
         // --- AVATAR CLICK TOGGLE (Pause/Play) ---
@@ -328,7 +334,7 @@
             if (video) {
                 avatarContainer.addEventListener('click', function() {
                     if (video.paused) {
-                        video.play().then(() => avatarContainer.classList.add('playing'));
+                        video.play().then(() => avatarContainer.classList.add('playing')).catch(e => console.error(e));
                     } else {
                         video.pause();
                         avatarContainer.classList.remove('playing');
