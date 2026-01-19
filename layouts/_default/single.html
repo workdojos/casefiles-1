@@ -256,6 +256,7 @@
                 } else {
                     audioElement.volume = 0;
                     audioElement.pause();
+                    audioElement.currentTime = 0;
                     clearInterval(fadeEffect);
                 }
             }, fadeInterval);
@@ -268,7 +269,7 @@
                 typeIndex++;
                 setTimeout(typeWriter, typeSpeed);
             } else {
-                // STOP LOUD SOUND when the title is finished
+                // STOP LOUD SOUND when the title is finished (this was working fine, kept as-is)
                 if(typeSound) {
                     typeSound.pause();
                     typeSound.currentTime = 0;
@@ -288,25 +289,26 @@
             // 2. Reveal Content
             document.body.classList.add('active');
 
-            // 3. Trigger Loud Title Typing
+            // 3. Trigger Loud Title Typing (UNCHANGED - this was working fine)
             if (typeSound) {
                 typeSound.volume = 0.5;
                 typeSound.play().catch(e => console.error("Loud audio error:", e));
             }
             typeWriter();
 
-            // 4. Trigger Soft Background Ambience (Shortened to 15s)
+            // 4. Trigger Soft Background Ambience (10 seconds total)
             if (ambienceSound) {
-                const targetVolume = 0.20;    // Reduced volume by 20% (was 0.25)
-                const fadeInDuration = 4;     // 4 second fade-in
-                const fadeOutDuration = 6;    // 6 second fade-out
-                const totalPlayTime = 15;     // Total duration before it stops
+                const targetVolume = 0.12;    // Further reduced for softer ambience
+                const fadeInDuration = 2;     // 2 second fade-in
+                const fadeOutDuration = 4;    // 4 second fade-out
+                const totalPlayTime = 10;     // Total duration: 10 seconds
                 
                 ambienceSound.volume = 0;
+                ambienceSound.currentTime = 0; // Start from beginning
                 ambienceSound.play().catch(e => console.error("Ambience audio error:", e));
 
                 // --- FADE IN ---
-                let fadeInInterval = 100; 
+                let fadeInInterval = 50; // Smoother fade with more frequent updates
                 let fadeInSteps = (fadeInDuration * 1000) / fadeInInterval;
                 let fadeInIncrement = targetVolume / fadeInSteps;
 
@@ -321,7 +323,7 @@
 
                 // --- FADE OUT ---
                 // Start fading out after (Total Time - FadeOut Duration) 
-                // In this case: 15s - 6s = starts at 9 seconds
+                // In this case: 10s - 4s = starts at 6 seconds
                 const startTimeForFadeOut = (totalPlayTime - fadeOutDuration) * 1000;
 
                 setTimeout(() => {
