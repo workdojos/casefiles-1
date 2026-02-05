@@ -324,10 +324,20 @@
             // C. AVATAR (Left paused intentionally)
         });
 
-        // --- AVATAR CLICK LOGIC (ONLY WAY TO PLAY) ---
+// --- AVATAR CLICK LOGIC (ONLY WAY TO PLAY) ---
         if (avatarContainer) {
             const video = avatarContainer.querySelector('video');
             if (video) {
+                // Hide the video element but keep the container
+                video.style.display = 'none';
+                
+                // Optional: Hide the play button too since there's no video
+                const playButton = avatarContainer.querySelector('.play-button');
+                if (playButton) {
+                    playButton.style.display = 'none';
+                }
+                
+                /*
                 avatarContainer.addEventListener('click', function() {
                     if (video.paused) {
                         video.play().then(() => {
@@ -338,6 +348,7 @@
                         avatarContainer.classList.remove('playing');
                     }
                 });
+                */
             }
         }
     });
