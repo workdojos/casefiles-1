@@ -64,12 +64,12 @@ could be made.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Briefing Details:**
 - [Initial Police Report →](/tylenol-case/briefing/police-report/)
 - [Medical Examiner Note →](/tylenol-case/briefing/medical-examiner/)
 - [Scene Photos →](/tylenol-case/briefing/scene-photos/)
-
+-->
 **Navigate:**
 - [Go to Evidence →](/tylenol-case/evidence/)
 - [Go to Timeline →](/tylenol-case/timeline/)

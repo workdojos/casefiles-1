@@ -84,12 +84,12 @@ The case becomes a national crisis.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **Detailed sequences:**
 - [September 29 (Day 1) →](/tylenol-case/sequence/day-1/)
 - [September 30 (Day 2) →](/tylenol-case/sequence/day-2/)
 - [October 1-2 (Day 3-4) →](/tylenol-case/sequence/day-3/)
-
+-->
 **Navigate:**
 - [Investigation sequence →](/tylenol-case/sequence/investigation/)
 - [Go to Victims →](/tylenol-case/victims/)

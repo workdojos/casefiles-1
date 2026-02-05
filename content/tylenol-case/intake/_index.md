@@ -75,12 +75,12 @@ failed to match Kaczynski or Lewis.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Full Files:**
 - [James Lewis Profile →](/tylenol-case/intake/james-lewis/)
 - [Roger Arnold Profile →](/tylenol-case/intake/roger-arnold/)
 - [The DNA Evidence →](/tylenol-case/intake/dna-evidence/)
-
+-->
 **Navigate:**
 - [Go to Evidence →](/tylenol-case/evidence/)
 - [Go to Timeline →](/tylenol-case/timeline/)

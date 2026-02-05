@@ -101,12 +101,12 @@ the products on the shelf.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Location Details:**
 - [Kellerman Residence →](/tylenol-case/locations/kellerman-home/)
 - [Janus Residence →](/tylenol-case/locations/janus-home/)
 - [Jewel-Osco Store →](/tylenol-case/locations/jewel-osco/)
-
+-->
 **Navigate:**
 - [More Locations (4-7) →](/tylenol-case/locations/part-2/)
 - [Go to Evidence →](/tylenol-case/evidence/)

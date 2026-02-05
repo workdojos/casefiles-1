@@ -76,12 +76,12 @@ the medical support system.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **Detailed Supports:**
 - [September 29 (Day 1) →](/tylenol-case/support/day-1/)
 - [September 30 (Day 2) →](/tylenol-case/support/day-2/)
 - [October 1-2 (Day 3-4) →](/tylenol-case/support/day-3/)
-
+-->
 **Navigate:**
 - [Investigation Support →](/tylenol-case/support/investigation/)
 - [Go to Victims →](/tylenol-case/victims/)

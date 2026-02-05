@@ -34,12 +34,12 @@ Output is optimized for human and machine consumption.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Full Profiles:**
 - [Mary Kellerman Details →](/tylenol-case/agent/mary-kellerman/)
 - [Adam Janus Details →](/tylenol-case/agent/adam-janus/)
 - [Stanley Janus Details →](/tylenol-case/agent/stanley-janus/)
-
+-->
 **Navigate:**
 - [Next agent (4-7) →](/tylenol-case/agent/part-2/)
 - [Back to Overview →](/tylenol-case/)

@@ -49,13 +49,13 @@ localized event.
 ZONE #3: THE RETAIL CORRIDOR
 Type: Distribution Points
 Impact: Widespread Panic
-
+<!--
 The contaminated bottles were found at:
 - Jewel Foods
 - Osco Drug
 - Walgreen's
 - Frank's Finer Foods
-
+-->
 Because the tampering happened at
 different retail chains, it proved the
 bottles were not corrupted at a single

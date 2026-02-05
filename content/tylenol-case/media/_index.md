@@ -72,12 +72,12 @@ for crisis management.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Media Files:**
 - [Broadcast Transcripts →](/tylenol-case/media/transcripts/)
 - [Newspaper Clippings →](/tylenol-case/media/clippings/)
 - [Press Conference Video →](/tylenol-case/media/press-conference/)
-
+-->
 **Navigate:**
 - [Back to Overview →](/tylenol-case/)
 - [Go to Suspects →](/tylenol-case/suspects/)

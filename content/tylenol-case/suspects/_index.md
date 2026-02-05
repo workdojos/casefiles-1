@@ -92,12 +92,12 @@ The connection remains speculative.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Full Files:**
 - [James Lewis Profile →](/tylenol-case/suspects/james-lewis/)
 - [Roger Arnold Profile →](/tylenol-case/suspects/roger-arnold/)
 - [Laurie Dann Profile →](/tylenol-case/suspects/laurie-dann/)
-
+-->
 **Navigate:**
 - [More Suspects →](/tylenol-case/suspects/part-2/)
 - [Go to Evidence →](/tylenol-case/evidence/)

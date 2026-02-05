@@ -96,12 +96,12 @@ in the Chicago area were found before the deaths.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Evidence Files:**
 - [Contaminated Bottles →](/tylenol-case/evidence/bottles/)
 - [Packaging Analysis →](/tylenol-case/evidence/packaging/)
 - [Cyanide Analysis →](/tylenol-case/evidence/cyanide/)
-
+-->
 **Navigate:**
 - [More Evidence →](/tylenol-case/evidence/part-2/)
 - [Go to Documents →](/tylenol-case/documents/)

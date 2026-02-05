@@ -61,12 +61,12 @@ of family members.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Full Profiles:**
 - [Mary Kellerman Details →](/tylenol-case/board/mary-kellerman/)
 - [Adam Janus Details →](/tylenol-case/board/adam-janus/)
 - [Stanley Janus Details →](/tylenol-case/board/stanley-janus/)
-
+-->
 **Navigate:**
 - [Back to Overview →](/tylenol-case/)
 - [Go to Suspects →](/tylenol-case/suspects/)

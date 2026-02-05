@@ -74,12 +74,12 @@ of the tamperer stocking the shelves.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **Access Tasks:**
 - [FBI Files (FOIA) →](/tylenol-case/tasks/fbi-files/)
 - [Extortion Letter →](/tylenol-case/tasks/extortion/)
 - [Autopsy Reports →](/tylenol-case/tasks/autopsies/)
-
+-->
 **Navigate:**
 - [Go to Timeline →](/tylenol-case/timeline/)
 - [Go to Evidence →](/tylenol-case/evidence/)
