@@ -4,7 +4,7 @@ date: 1982-09-29
 draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/sequence.png"
 video_url: ""
-iframe_url: "p"
+iframe_url: ""
 audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/sequence.mp3"
 avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/sequence-avatar.mp4"
 ---
