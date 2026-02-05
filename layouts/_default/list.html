@@ -215,13 +215,8 @@
         {{ end }}
     </article>
     
-    {{ if .Params.avatar_video }}
+{{ if .Params.avatar_video }}
     <div class="avatar-overlay" id="avatarOverlay">
-        <div class="play-button"></div>
-        <video loop playsinline webkit-playsinline>
-            <source src="{{ .Params.avatar_video }}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
     </div>
     {{ end }}
 
@@ -323,8 +318,8 @@
 
             // C. AVATAR (Left paused intentionally)
         });
-
-        // --- AVATAR CLICK LOGIC (ONLY WAY TO PLAY) ---
+// --- AVATAR CLICK LOGIC (ONLY WAY TO PLAY) ---
+        /*
         if (avatarContainer) {
             const video = avatarContainer.querySelector('video');
             if (video) {
@@ -340,6 +335,7 @@
                 });
             }
         }
+        */
     });
 </script>
 </body>
