@@ -43,7 +43,7 @@ files = [
   ["Community", "/tylenol-case/community/"],
   ["Intake", "/tylenol-case/intake/"],
   ["Support", "/tylenol-case/support/"],
-  ["asks", "/tylenol-case/tasks/"],
+  ["Tasks", "/tylenol-case/tasks/"],
   ["Toolkit", "/tylenol-case/toolkit/"],
   ["Evidence", "/tylenol-case/evidence/"],
   ["Locations", "/tylenol-case/locations/"],
