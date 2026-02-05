@@ -85,13 +85,13 @@ cyanide-laced capsules.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Full Profiles:**
 - [Theresa Janus Details →](/tylenol-case/victims/theresa-janus/)
 - [Mary Reiner Details →](/tylenol-case/victims/mary-reiner/)
 - [Mary McFarland Details →](/tylenol-case/victims/mary-mcfarland/)
 - [Paula Prince Details →](/tylenol-case/victims/paula-prince/)
-
+-->
 **Navigate:**
 - [Back to Victims 1-3 →](/tylenol-case/victims/)
 - [Go to Suspects →](/tylenol-case/suspects/)

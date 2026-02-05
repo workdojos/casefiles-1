@@ -101,5 +101,5 @@ The connection remains speculative.
 **Navigate:**
 - [More Suspects →](/tylenol-case/suspects/part-2/)
 - [Go to Evidence →](/tylenol-case/evidence/)
-- [Go to Timeline →](/tylenol-case/timeline/)
+- [Go to Timeline →](/tylenol-case/sequence/)
 - [Back to Overview →](/tylenol-case/)

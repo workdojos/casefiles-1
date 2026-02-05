@@ -79,13 +79,13 @@ consumers.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Toolkit Files:**
 - [Contaminated Bottles →](/tylenol-case/toolkit/bottles/)
 - [Packaging Analysis →](/tylenol-case/toolkit/packaging/)
 - [Cyanide Analysis →](/tylenol-case/toolkit/cyanide/)
-
+-->
 **Navigate:**
 - [Go to Documents →](/tylenol-case/documents/)
-- [Go to Timeline →](/tylenol-case/timeline/)
+- [Go to Timeline →](/tylenol-case/sequence/)
 - [Back to Overview →](/tylenol-case/)

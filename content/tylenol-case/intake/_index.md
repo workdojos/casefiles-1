@@ -83,5 +83,5 @@ failed to match Kaczynski or Lewis.
 -->
 **Navigate:**
 - [Go to Evidence →](/tylenol-case/evidence/)
-- [Go to Timeline →](/tylenol-case/timeline/)
+- [Go to Timeline →](/tylenol-case/sequence/)
 - [Back to Overview →](/tylenol-case/)

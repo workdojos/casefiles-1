@@ -81,6 +81,6 @@ of the tamperer stocking the shelves.
 - [Autopsy Reports →](/tylenol-case/tasks/autopsies/)
 -->
 **Navigate:**
-- [Go to Timeline →](/tylenol-case/timeline/)
+- [Go to Timeline →](/tylenol-case/sequence/)
 - [Go to Evidence →](/tylenol-case/evidence/)
 - [Back to Overview →](/tylenol-case/)

@@ -64,12 +64,12 @@ from the same bottle.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Full Profiles:**
 - [Mary Kellerman Details →](/tylenol-case/victims/mary-kellerman/)
 - [Adam Janus Details →](/tylenol-case/victims/adam-janus/)
 - [Stanley Janus Details →](/tylenol-case/victims/stanley-janus/)
-
+-->
 **Navigate:**
 - [Next Victims (4-7) →](/tylenol-case/victims/part-2/)
 - [Back to Overview →](/tylenol-case/)

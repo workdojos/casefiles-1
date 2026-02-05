@@ -105,5 +105,5 @@ in the Chicago area were found before the deaths.
 **Navigate:**
 - [More Evidence →](/tylenol-case/evidence/part-2/)
 - [Go to Documents →](/tylenol-case/documents/)
-- [Go to Timeline →](/tylenol-case/timeline/)
+- [Go to Timeline →](/tylenol-case/sequence/)
 - [Back to Overview →](/tylenol-case/)
