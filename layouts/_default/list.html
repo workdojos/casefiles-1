@@ -217,6 +217,10 @@
     
 {{ if .Params.avatar_video }}
     <div class="avatar-overlay" id="avatarOverlay">
+        <video loop muted playsinline>
+            <source src="{{ .Params.avatar_video }}" type="video/mp4">
+        </video>
+        <div class="play-button"></div>
     </div>
     {{ end }}
 
@@ -319,7 +323,6 @@
             // C. AVATAR (Left paused intentionally)
         });
 // --- AVATAR CLICK LOGIC (ONLY WAY TO PLAY) ---
-        /*
         if (avatarContainer) {
             const video = avatarContainer.querySelector('video');
             if (video) {
@@ -335,7 +338,6 @@
                 });
             }
         }
-        */
     });
 </script>
 </body>
