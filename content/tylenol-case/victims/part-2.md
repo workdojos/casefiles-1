@@ -5,8 +5,8 @@ draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims-part-2.png"
 video_url: ""
 iframe_url: ""
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/14-victims2.mp3"
-avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/14-victims2.mp4"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/14-victims2.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/14-victims2.mp4"
 ---
 
 {{< typewriter >}}

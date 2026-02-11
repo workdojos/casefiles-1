@@ -215,15 +215,14 @@
         {{ end }}
     </article>
     
-<div class="avatar-overlay" id="avatarOverlay">
-        <!-- 
-        <div class="play-button"></div>
-        <video loop playsinline webkit-playsinline>
-            <source src="https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/briefing/briefing-avatar.mp4" type="video/mp4">
-            "Your browser does not support the video tag."
+{{ if .Params.avatar_video }}
+    <div class="avatar-overlay" id="avatarOverlay">
+        <video loop muted playsinline>
+            <source src="{{ .Params.avatar_video }}" type="video/mp4">
         </video>
-        -->
+        <div class="play-button"></div>
     </div>
+    {{ end }}
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -323,21 +322,10 @@
 
             // C. AVATAR (Left paused intentionally)
         });
-
 // --- AVATAR CLICK LOGIC (ONLY WAY TO PLAY) ---
         if (avatarContainer) {
             const video = avatarContainer.querySelector('video');
             if (video) {
-                // Hide the video element but keep the container
-                video.style.display = 'none';
-                
-                // Optional: Hide the play button too since there's no video
-                const playButton = avatarContainer.querySelector('.play-button');
-                if (playButton) {
-                    playButton.style.display = 'none';
-                }
-                
-                /*
                 avatarContainer.addEventListener('click', function() {
                     if (video.paused) {
                         video.play().then(() => {
@@ -348,7 +336,6 @@
                         avatarContainer.classList.remove('playing');
                     }
                 });
-                */
             }
         }
     });

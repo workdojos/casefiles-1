@@ -5,8 +5,8 @@ draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/briefing/briefing.png"
 video_url: ""
 iframe_url: ""
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/briefing/2-situation.mp3"
-avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/briefing/2-situation.mp4"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/2-situation.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/2-situation.mp4"
 ---
 
 {{< typewriter >}}

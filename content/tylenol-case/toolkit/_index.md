@@ -5,8 +5,8 @@ draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/toolkit/toolkit.png"
 video_url: ""
 iframe_url: ""
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/toolkit/8-toolkit.mp3"
-avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/toolkit/8-toolkit.mp4"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/8-toolkit.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/8-toolkit.mp4"
 ---
 
 {{< typewriter >}}

@@ -6,7 +6,7 @@ featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victim
 video_url: ""
 iframe_url: ""
 audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/5-victims.mp3"
-avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/5-victims.mp4"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/5-victims.mp4"
 ---
 
 {{< typewriter >}}

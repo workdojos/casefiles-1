@@ -5,8 +5,8 @@ draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/evidence/evidence.png"
 video_url: ""
 iframe_url: ""
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/evidence/7-hardware.mp3"
-avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/evidence/7-hardware.mp4"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/7-hardware.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/7-hardware.mp4"
 ---
 
 {{< typewriter >}}
