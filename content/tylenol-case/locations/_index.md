@@ -5,8 +5,8 @@ draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/locations/locations.png"
 video_url: ""
 iframe_url: ""
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/locations/locations0.mp3"
-avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/locations/locations-avatar.mp4"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/locations/5-locations.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/locations/5-locations.mp4"
 ---
 
 {{< typewriter >}}

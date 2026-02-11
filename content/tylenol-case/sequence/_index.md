@@ -5,8 +5,8 @@ draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/sequence.png"
 video_url: ""
 iframe_url: ""
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/sequence.mp3"
-avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/sequence-avatar.mp4"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/6-timeline.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/sequence/6-timeline.mp4"
 ---
 
 {{< typewriter >}}
