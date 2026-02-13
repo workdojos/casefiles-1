@@ -5,7 +5,7 @@ draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims.png"
 video_url: ""
 iframe_url: ""
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/1-app.mp3"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/14-victims2.mp3"
 avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/1-app.mp4"
 ---
 
@@ -40,7 +40,6 @@ Where would you like to begin?
 
 **Navigate to:**
 - [Victims →](/tylenol-case/victims/)
-- [Suspects →](/tylenol-case/suspects/)
 - [Locations →](/tylenol-case/locations/)
 - [Timeline →](/tylenol-case/timeline/)
 - [Evidence →](/tylenol-case/evidence/)

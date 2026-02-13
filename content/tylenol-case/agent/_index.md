@@ -5,8 +5,8 @@ draft: false
 featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/agent/agent.png"
 video_url: ""
 iframe_url: ""
-audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/agent/15-rag.mp3"
-avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/agent/15-rag.mp4"
+audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/15-rag.mp3"
+avatar_video: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/15-rag.mp4"
 ---
 
 {{< typewriter >}}
@@ -43,5 +43,4 @@ Output is optimized for human and machine consumption.
 **Navigate:**
 - [Next agent (4-7) →](/tylenol-case/agent/part-2/)
 - [Back to Overview →](/tylenol-case/)
-- [Go to Suspects →](/tylenol-case/suspects/)
 - [Go to Locations →](/tylenol-case/locations/)

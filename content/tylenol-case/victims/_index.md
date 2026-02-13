@@ -73,5 +73,4 @@ from the same bottle.
 **Navigate:**
 - [Next Victims (4-7) →](/tylenol-case/victims/part-2/)
 - [Back to Overview →](/tylenol-case/)
-- [Go to Suspects →](/tylenol-case/suspects/)
 - [Go to Locations →](/tylenol-case/locations/)

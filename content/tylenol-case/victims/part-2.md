@@ -2,7 +2,7 @@
 title: "Tylenol Murders - Victims - Part 2"
 date: 1982-09-29
 draft: false
-featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims-part-2.png"
+featured_image: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/victims/victims.png"
 video_url: ""
 iframe_url: ""
 audio_url: "https://dfgnflfqxk4ps.cloudfront.net/casefiles-1/14-victims2.mp3"

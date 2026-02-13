@@ -80,5 +80,4 @@ for crisis management.
 -->
 **Navigate:**
 - [Back to Overview →](/tylenol-case/)
-- [Go to Suspects →](/tylenol-case/suspects/)
 - [Go to Locations →](/tylenol-case/locations/)

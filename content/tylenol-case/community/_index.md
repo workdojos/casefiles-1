@@ -66,12 +66,12 @@ store shelves individually.
 {{< /typewriter >}}
 
 ---
-
+<!--
 **View Location Details:**
 - [Kellerman Residence →](/tylenol-case/community/kellerman-home/)
 - [Janus Residence →](/tylenol-case/community/janus-home/)
 - [Jewel-Osco Store →](/tylenol-case/community/jewel-osco/)
-
+-->
 **Navigate:**
 - [Go to Evidence →](/tylenol-case/evidence/)
 - [Go to Timeline →](/tylenol-case/sequence/)

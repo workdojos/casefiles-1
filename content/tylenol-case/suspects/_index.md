@@ -99,7 +99,6 @@ The connection remains speculative.
 - [Laurie Dann Profile →](/tylenol-case/suspects/laurie-dann/)
 -->
 **Navigate:**
-- [More Suspects →](/tylenol-case/suspects/part-2/)
 - [Go to Evidence →](/tylenol-case/evidence/)
 - [Go to Timeline →](/tylenol-case/sequence/)
 - [Back to Overview →](/tylenol-case/)
